@@ -1,0 +1,17 @@
+<ion-content [fullscreen]="true">
+  <div class="logon">
+      <ion-card>
+        <img class="logo" src="./assets/logo.png">
+        
+      <ion-card-content>
+        <ion-input placeholder="Nome" [(ngModel)]="name" type="text" name="name" ></ion-input>   
+          <ion-input placeholder="Email" [(ngModel)]="email" type="text" name="email" ></ion-input>   
+          <ion-input placeholder="Senha" [(ngModel)]="password" type="password" name="password"></ion-input>    
+           <ion-button  color="body" type="submit" (click)="register()" >Registrar</ion-button>
+           <span>Já possui conta?</span>
+           <ion-button class="botaologin" (click)="GoToSignIn()" color="body" type="button">Entrar</ion-button>
+          
+        </ion-card-content>
+  </ion-card>
+  </div>
+</ion-content>

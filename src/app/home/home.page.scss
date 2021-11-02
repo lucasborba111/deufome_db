@@ -1,0 +1,149 @@
+#logo {
+  height: 100px;
+  width: 130px;
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  transform: translate(50%, -50%);
+}
+#card{
+  width: 200px;
+}
+#cards{
+  justify-content: center;
+}
+ion-grid{
+  display: flex;
+  flex-direction: row;
+}
+.img{
+border-radius: 5px;
+
+}
+.title {
+  top: 0px;
+  transform: translate(0, 0%);
+  margin-left: 1px;
+}
+
+//background slide menu
+.menubackground {
+  height: 45px;
+}
+
+//background do menu de receitas
+.background-menu {
+  border-radius: 2px;
+  height: 33px;
+  width: 300px;
+  background-color: #ad0002;
+}
+
+
+//CONFIG DO SLIDE
+ion-card {
+  box-shadow: black;
+  border-radius: 12px;
+  background-color: white;
+  img {
+    width: 100%;
+    transition: 600ms all ease-in-out;
+  }
+}
+
+//background do slide
+.ion-margin-top {
+  //background-image: url('/assets/cozinha.jpg');
+  //background-position: center;
+  //background-size: cover;
+  box-shadow: rgb(255, 255, 255);
+  width: 100%;
+  padding: 5px;
+}
+
+img {
+  object-fit: cover;
+  width: 100%;
+  transform: scale(1.1, 1.1);
+  transition: 600ms all ease-in-out;
+}
+
+.swiper-slide-active {
+  transform: scale(1, 1);
+}
+
+.swiper-slide {
+  transition: 400ms all ease-in-out;
+}
+
+//titulo dos slides da semana
+#textoslide {
+  color: #222222;
+  font-weight: 700;
+  font-family: Helvetica;
+}
+
+//linha para infeite
+#linhabaixo {
+  float: top;
+  background-color: none;
+  height: 1.5px;
+  width: 100%;
+  margin-top: 0px;
+  margin-left: 0;
+}
+
+//linha para infeite
+#linhacima {
+  float: top;
+  background-color: none;
+  height: 1px;
+  width: 100%;
+  margin-bottom: 0px;
+  margin-left: 0;
+}
+
+//titulo do slide menu
+#tituloslide {
+  font-family: BebasNeue-Regular;
+  position: relative;
+  float: right;
+  right: 50%;
+  transform: translate(50%, 0);
+  font-size: 23px;
+  color: #313131;
+}
+
+
+#banner1 {
+  background-size: cover;
+  background-position: center center;
+
+  margin: 0;
+}
+
+ion-slides {
+  --bullet-background: black;
+  --bullet-background-active: red;
+}
+
+.teste {
+  font-family: Helvetica;
+  font-weight: 900;
+  font-size: 11px;
+  color: rgb(248, 248, 248);
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  transform: translate(50%, -50%);
+}
+
+.titulocategoria{
+  font-size: 23px;
+  color: #313131;
+  font-family: BebasNeue-Regular;
+}
+
+
+
+

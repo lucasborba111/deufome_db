@@ -1,0 +1,26 @@
+<ion-header>
+	<ion-toolbar>
+    <ion-buttons slot="start">
+			<ion-back-button defaultHref="home"></ion-back-button>
+		  </ion-buttons>
+		<ion-img src="../assets/logo.png" id="logo"></ion-img>
+	</ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="texto">
+  <span>Poste sua Receita</span>
+  </div>
+   <div id="form">
+    <ion-select interface="action-sheet" placeholder="Categoria" cancelText="Cancelar" >
+    <ion-select-option value="lanches">Lanches</ion-select-option>
+      <ion-select-option value="saladas">Saladas</ion-select-option>
+      <ion-select-option value="massas">Massas</ion-select-option>
+      <ion-select-option value="vegana">Vegana</ion-select-option>
+      </ion-select>
+    <ion-input placeholder="Titulo" clearInput ></ion-input>
+    <ion-textarea placeholder="Ingredientes" ></ion-textarea>
+    <ion-textarea placeholder="Modo de Preparo" ></ion-textarea>
+
+  <ion-button class="botaopostar" color="body">Publicar</ion-button>
+</div>
+</ion-content>

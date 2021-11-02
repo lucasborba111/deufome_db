@@ -1,0 +1,81 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-icon name="book-outline" slot="end" style="margin-right: 30px; font-size: 23px;" routerLink="../topreceitas"></ion-icon>
+    <ion-img src="../assets/logo.png" id="logo"></ion-img>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid  style="justify-content: center; margin-top: 10px;">
+    <ion-text class="titulocategoria">SEJA BEM VINDO!</ion-text>
+  </ion-grid>
+  <ion-grid id="cards">
+  <ion-card id="card">
+    <ion-card-header> <img src="../../assets/comida.png" class="img" >
+			<ion-card-title class="tituloreceitas">1° Passo</ion-card-title>
+			<ion-card-subtitle >Verifique sua prateleira</ion-card-subtitle>
+			</ion-card-header>
+  </ion-card>
+  <ion-card id="card">
+    <ion-card-header> <img src="../../assets/comida.png" class="img" >
+			<ion-card-title class="tituloreceitas">2° Passo</ion-card-title>
+			<ion-card-subtitle >Escolha três ingredientes, uma categoria do menu e boas práticas!</ion-card-subtitle>
+			 </ion-card-header>
+  </ion-card>
+</ion-grid>
+<ion-grid style="justify-content: center;">
+    <ion-text class="titulocategoria">Categorias</ion-text>
+  </ion-grid>
+  <ion-slides   class="menubackground"  [options]="option2">
+    <ion-slide>
+      <button class="background-menu" routerLink='../lanches'>
+      <span class="teste">LANCHES</span>
+      </button>
+    </ion-slide>
+
+    <ion-slide>
+      <button class="background-menu" routerLink='../saladas'>
+      <span  class="teste">SALADAS</span>
+      </button>
+    </ion-slide>
+
+    <ion-slide>
+      <button routerLink='../veganas' class="background-menu">
+      <span  class="teste">VEGANAS </span>
+      </button>
+    </ion-slide>
+
+    <ion-slide>
+      <button class="background-menu" routerLink='../massas'>
+      <span class="teste">MASSAS</span>
+      </button>
+    </ion-slide>
+  </ion-slides>
+
+    <ion-text id="tituloslide">Melhores da Semana</ion-text>
+  <ion-slides [options]="option" class="ion-margin-top">
+    <ion-slide>
+      <ion-card id="cardslide1">
+        <img src="assets/receita1.jpg">
+        <p id="textoslide">Pudim de Chocolate 2 Ingredientes</p>
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card id="cardslide1">
+        <img src="assets/receita2.jpg">
+        <p id="textoslide">Almôndegas Gratinadas</p>
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card id="cardslide1">
+        <img src="assets/receita3.jpg">
+        <p id="textoslide">Pão de Queijo 3 Ingredientes</p>
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+
+</ion-content>
+
+

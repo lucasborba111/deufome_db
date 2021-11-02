@@ -1,0 +1,29 @@
+<ion-header>
+	<link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+	<ion-toolbar>
+    <ion-icon name="log-out-outline" slot="end" style="margin-right: 10px;" (click)="signOut()"></ion-icon>
+    <ion-img src="../assets/logo.png" id="logo"></ion-img>
+		<ion-buttons slot="start">
+			<ion-back-button color="Main" defaultHref="home"></ion-back-button>
+		  </ion-buttons>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<div id="perfil">
+<div id="fotoPosition"><img src="assets/perfilfoto.png" id="foto"></div>
+
+</div>
+<div id="cards">
+  <span>Nome</span>
+  <ion-card>
+    <p  style="text-align: center;">{{user?.userName}}</p>
+  </ion-card>
+  <span>Minhas Receitas</span>
+  <ion-card>
+    <p style="text-align: center;">{{receita}}</p>
+  </ion-card>
+
+</div>
+</ion-content>

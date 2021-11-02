@@ -1,0 +1,25 @@
+.subtitles{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .titles{
+    display: flex;
+    margin-top: 10x;
+    float: left;
+  }
+  
+  .img{
+   height: 70px;
+   border-radius: 10px;
+  }
+  .card-header{
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between ;
+    width: 120%;
+    align-self: center;
+    padding: 5%;
+  }
+  
+  
