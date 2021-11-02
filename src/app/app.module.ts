@@ -18,6 +18,10 @@ import firebaseConfig from './firebase/firebase';
 import { AuthService } from './services/auth.service';
 //auth guard
 import { AuthGuard } from './guards/auth.guard';
+import { WebView } from '@ionic-native/ionic-webview/ngx';
+import { Camera } from '@ionic-native/camera/ngx';
+
+
 
 
 @NgModule({
@@ -30,12 +34,16 @@ import { AuthGuard } from './guards/auth.guard';
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFirestoreModule,
     AngularFireAuthModule,
-    AngularFireStorageModule
+    AngularFireStorageModule,
+
   ],
   providers: [
     AuthGuard,
     AuthService,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+    WebView,
+    Camera,
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy},
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

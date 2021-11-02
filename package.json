@@ -25,11 +25,18 @@
     "@capacitor/haptics": "1.1.2",
     "@capacitor/keyboard": "1.1.2",
     "@capacitor/status-bar": "1.0.5",
+    "@firebase/database": "^0.12.2",
+    "@ionic-native/camera": "^5.36.0",
+    "@ionic-native/camera-preview": "^5.36.0",
+    "@ionic-native/core": "^5.36.0",
     "@ionic-native/firebase": "^5.36.0",
+    "@ionic-native/ionic-webview": "^5.36.0",
     "@ionic/angular": "^5.5.2",
     "@ionic/storage": "^3.0.6",
     "@ionic/storage-angular": "^3.0.6",
     "angular": "^1.8.2",
+    "cordova-android": "9.1.0",
+    "cordova-plugin-ionic-webview": "^5.0.0",
     "cordova-sqlite-storage": "^6.0.0",
     "firebase": "^8.1.1",
     "ionic-storage": "^1.0.0",
@@ -68,12 +75,24 @@
     "karma-jasmine-html-reporter": "^1.5.0",
     "protractor": "~7.0.0",
     "ts-node": "~8.3.0",
-    "typescript": "~4.2.4"
+    "typescript": "~4.2.4",
+    "cordova-plugin-whitelist": "1.3.3",
+    "cordova-plugin-statusbar": "2.4.2",
+    "cordova-plugin-device": "2.0.2",
+    "cordova-plugin-splashscreen": "5.0.2",
+    "cordova-plugin-ionic-keyboard": "^2.0.5"
   },
   "description": "An Ionic project",
   "cordova": {
     "plugins": {
-      "cordova-sqlite-storage": {}
+      "cordova-sqlite-storage": {},
+      "cordova-plugin-camera": {},
+      "cordova-plugin-ionic-webview": {},
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-statusbar": {},
+      "cordova-plugin-device": {},
+      "cordova-plugin-splashscreen": {},
+      "cordova-plugin-ionic-keyboard": {}
     }
   }
 }
