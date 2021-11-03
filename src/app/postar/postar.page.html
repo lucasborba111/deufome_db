@@ -1,7 +1,7 @@
 <ion-content>
-<div>
-<div>
-  <div  (click)="choosePhotos()" *ngIf="post.photo =='' ">
+<div class="wrapper">
+<div class="photoDiv">
+  <div class="imgDiv" (click)="choosePhotos()" *ngIf="post.photo == '' ">
     <ion-icon name="add"></ion-icon>
   </div>
 </div>
@@ -11,7 +11,7 @@
 </div>
 </div>
 
-<div>
+<div class="formBody">
   <ion-item>
     <ion-label position="floating">Title</ion-label>
     <ion-input type="text" [(ngModel)]="post.title">
@@ -23,4 +23,7 @@
   <ion-input type="text" [(ngModel)]="post.description">
   </ion-input>
 </ion-item>
+<div>
+  <ion-button (click)="submitPost()">Save</ion-button>
+</div>
 </ion-content>

@@ -8,10 +8,25 @@
 	</ion-toolbar>
   </ion-header>
   <ion-content>
-	<div id="todos">
 	
-
-	<ion-card id="cards" (click)="toggleHidden()">
+<div class="wrapper">
+<div class="item" (click)="postDetails(post)" *ngFor="let post of posts" >
+	<div class="topDiv">
+		<img src="{{post.photo}}"/>
+	</div>
+	<div class="bottomDiv>">{{post.title}}</div>
+</div>
+</div>	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div id="todos">
+		<ion-card id="cards" (click)="toggleHidden()">
 	  <ion-card-header>
 		<img src="assets/lanche1.jpg" class="img" />
 		<ion-card-title class="tituloreceitas">Sanduíche natural de Frango</ion-card-title>
