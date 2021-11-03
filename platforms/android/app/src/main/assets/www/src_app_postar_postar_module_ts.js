@@ -92,15 +92,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "PostarPage": () => (/* binding */ PostarPage)
 /* harmony export */ });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! tslib */ 4762);
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! tslib */ 4762);
 /* harmony import */ var _raw_loader_postar_page_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !raw-loader!./postar.page.html */ 3575);
 /* harmony import */ var _postar_page_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./postar.page.scss */ 9981);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/core */ 7716);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/core */ 7716);
 /* harmony import */ var _ionic_native_camera_ngx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic-native/camera/ngx */ 4267);
 /* harmony import */ var _ionic_native_ionic_webview_ngx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ionic-native/ionic-webview/ngx */ 4575);
-/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @ionic/angular */ 476);
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @ionic/angular */ 476);
 /* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! firebase/app */ 2329);
 /* harmony import */ var _ionic_storage__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ionic/storage */ 1628);
+/* harmony import */ var _firebase_firebase__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../firebase/firebase */ 6633);
 
 
 
@@ -110,6 +111,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+firebase_app__WEBPACK_IMPORTED_MODULE_4__.default.initializeApp(_firebase_firebase__WEBPACK_IMPORTED_MODULE_6__.default);
 let PostarPage = class PostarPage {
     constructor(storage, webview, camera, alertCtrl, navCtrl) {
         this.storage = storage;
@@ -142,7 +145,7 @@ let PostarPage = class PostarPage {
         this.posts = [];
     }
     choosePhotos() {
-        return (0,tslib__WEBPACK_IMPORTED_MODULE_6__.__awaiter)(this, void 0, void 0, function* () {
+        return (0,tslib__WEBPACK_IMPORTED_MODULE_7__.__awaiter)(this, void 0, void 0, function* () {
             let alertBox = yield this.alertCtrl.create({
                 header: 'Choose from',
                 buttons: [
@@ -251,7 +254,7 @@ let PostarPage = class PostarPage {
         }
     }
     ngOnInit() {
-        return (0,tslib__WEBPACK_IMPORTED_MODULE_6__.__awaiter)(this, void 0, void 0, function* () {
+        return (0,tslib__WEBPACK_IMPORTED_MODULE_7__.__awaiter)(this, void 0, void 0, function* () {
             yield this.storage.create();
         });
     }
@@ -260,11 +263,11 @@ PostarPage.ctorParameters = () => [
     { type: _ionic_storage__WEBPACK_IMPORTED_MODULE_5__.Storage },
     { type: _ionic_native_ionic_webview_ngx__WEBPACK_IMPORTED_MODULE_3__.WebView },
     { type: _ionic_native_camera_ngx__WEBPACK_IMPORTED_MODULE_2__.Camera },
-    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_7__.AlertController },
-    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_7__.NavController }
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_8__.AlertController },
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_8__.NavController }
 ];
-PostarPage = (0,tslib__WEBPACK_IMPORTED_MODULE_6__.__decorate)([
-    (0,_angular_core__WEBPACK_IMPORTED_MODULE_8__.Component)({
+PostarPage = (0,tslib__WEBPACK_IMPORTED_MODULE_7__.__decorate)([
+    (0,_angular_core__WEBPACK_IMPORTED_MODULE_9__.Component)({
         selector: 'app-postar',
         template: _raw_loader_postar_page_html__WEBPACK_IMPORTED_MODULE_0__.default,
         styles: [_postar_page_scss__WEBPACK_IMPORTED_MODULE_1__.default]

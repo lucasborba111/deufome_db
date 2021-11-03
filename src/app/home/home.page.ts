@@ -21,7 +21,7 @@ export class HomePage implements OnInit {
   }
 
   option2 = {
-    slidesPerView: 3,
+    slidesPerView:false,
     centeredSlides: false,
     loop: false,
     spaceBetween: 2,

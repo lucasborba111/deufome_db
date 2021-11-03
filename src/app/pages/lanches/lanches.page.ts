@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { Storage } from '@ionic/storage';
 import firebase from 'firebase/app';
+
+
 @Component({
   selector: 'app-lanches',
   templateUrl: './lanches.page.html',
@@ -14,6 +16,15 @@ export class LanchesPage implements OnInit {
     private storage: Storage
   ) { }
  
+    deletePost(post){
+      console.log('post = ',post);
+      firebase.database().ref('posts/' + post.id).remove().then(res=>{
+        console.log('removed =', res);
+      })
+    }
+
+
+
   ionViewWillEnter(){
     this.fetchPosts();
   }
@@ -27,6 +38,7 @@ export class LanchesPage implements OnInit {
       for(let i in result){
         var element = result[i];
         let post = {
+          id: i,
           photo: element.photo,
           title: element.title,
           description: element.description,

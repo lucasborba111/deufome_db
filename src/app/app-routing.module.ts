@@ -5,7 +5,7 @@ import { AuthGuard } from './guards/auth.guard';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'login',
+    redirectTo: 'home',
     pathMatch: 'full'
   },
   {
@@ -43,19 +43,6 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
-    path: 'forgot-password',
-    loadChildren: () => import('./forgot-password/forgot-password.module').then( m => m.ForgotPasswordPageModule)
-  },
-  {
-    path: 'change-password',
-    loadChildren: () => import('./change-password/change-password.module').then( m => m.ChangePasswordPageModule),
-    canActivate: [AuthGuard]
-  },
-  {
-    path: 'page-not-found',
-    loadChildren: () => import('./page-not-found/page-not-found.module').then( m => m.PageNotFoundPageModule)
-  },
-  {
     path: 'profile',
     loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule),
     canActivate: [AuthGuard]
@@ -69,6 +56,11 @@ const routes: Routes = [
     path: 'topreceitas',
     loadChildren: () => import('./pages/topreceitas/topreceitas.module').then( m => m.TopreceitasPageModule)
   },
+  {
+    path: 'postdetails',
+    loadChildren: () => import('./postdetails/postdetails.module').then( m => m.PostdetailsPageModule)
+  },
+
 ];
 
 @NgModule({

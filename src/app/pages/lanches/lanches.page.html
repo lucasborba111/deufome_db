@@ -8,13 +8,15 @@
 	</ion-toolbar>
   </ion-header>
   <ion-content>
-	
 <div class="wrapper">
 <div class="item" (click)="postDetails(post)" *ngFor="let post of posts" >
 	<div class="topDiv">
 		<img src="{{post.photo}}"/>
 	</div>
-	<div class="bottomDiv>">{{post.title}}</div>
+	<div>
+		<ion-icon name="trash" (click)="deletePost(post)"></ion-icon>
+	</div>
+	<div class="bottomDiv">{{post.title}}</div>
 </div>
 </div>	
 	

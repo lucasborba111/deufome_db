@@ -4,6 +4,10 @@ import { WebView } from '@ionic-native/ionic-webview/ngx';
 import { AlertController, NavController } from '@ionic/angular';
 import firebase from 'firebase/app';
 import { Storage } from '@ionic/storage';
+import firebaseConfig from '../firebase/firebase';
+
+firebase.initializeApp(firebaseConfig);
+
 
 @Component({
   selector: 'app-postar',
@@ -11,6 +15,8 @@ import { Storage } from '@ionic/storage';
   styleUrls: ['./postar.page.scss'],
 })
 export class PostarPage implements OnInit {
+
+  
 
   cameraOptions: CameraOptions = {
     quality: 100,
@@ -87,7 +93,7 @@ export class PostarPage implements OnInit {
     let randomname = this.randomnumberGenerator();
     return new Promise<any>((resolve, reject) =>{
       let storageRef = firebase.storage().ref();
-      let imageRef = storageRef.child('posts/' +randomname);
+      let imageRef = storageRef.child('posts/' + randomname);
       
       this.toDataURL(image, (dataUrl) =>{
         console.log(dataUrl);
@@ -147,7 +153,7 @@ export class PostarPage implements OnInit {
          firebase.database().ref('posts').push(this.post).then(res=>{
            console.log('pushed', res);
            this.navCtrl.navigateRoot('home');
-         })
+         });
          
           //this.storage.get('postArray').then(res=>{
            // console.log('res = ',res);

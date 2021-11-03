@@ -81,19 +81,6 @@ const routes = [
         canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_0__.AuthGuard]
     },
     {
-        path: 'forgot-password',
-        loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_forgot-password_forgot-password_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./forgot-password/forgot-password.module */ 7157)).then(m => m.ForgotPasswordPageModule)
-    },
-    {
-        path: 'change-password',
-        loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_change-password_change-password_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./change-password/change-password.module */ 8232)).then(m => m.ChangePasswordPageModule),
-        canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_0__.AuthGuard]
-    },
-    {
-        path: 'page-not-found',
-        loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_page-not-found_page-not-found_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./page-not-found/page-not-found.module */ 6815)).then(m => m.PageNotFoundPageModule)
-    },
-    {
         path: 'profile',
         loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_profile_profile_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./profile/profile.module */ 4523)).then(m => m.ProfilePageModule),
         canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_0__.AuthGuard]
@@ -105,6 +92,10 @@ const routes = [
     {
         path: 'topreceitas',
         loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_pages_topreceitas_topreceitas_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./pages/topreceitas/topreceitas.module */ 8048)).then(m => m.TopreceitasPageModule)
+    },
+    {
+        path: 'postdetails',
+        loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_postdetails_postdetails_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./postdetails/postdetails.module */ 6414)).then(m => m.PostdetailsPageModule)
     },
 ];
 let AppRoutingModule = class AppRoutingModule {
