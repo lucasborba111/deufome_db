@@ -1,29 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-img src="../assets/logo.png" id="logo"></ion-img>
+  </ion-toolbar>
+</ion-header>
 <ion-content>
-<div class="wrapper">
-<div class="photoDiv">
-  <div class="imgDiv" (click)="choosePhotos()" *ngIf="post.photo == '' ">
-    <ion-icon name="add"></ion-icon>
+  <div class="texto">
+    <span>Poste sua Receita</span>
   </div>
-</div>
-
-<div *ngIf="post.photo != '' ">
-<img src="{{ post.photo}}"/>
-</div>
-</div>
-
-<div class="formBody">
-  <ion-item>
-    <ion-label position="floating">Title</ion-label>
-    <ion-input type="text" [(ngModel)]="post.title">
-    </ion-input>
-  </ion-item>
-</div>
-<ion-item>
-  <ion-label position="floating">description</ion-label>
-  <ion-input type="text" [(ngModel)]="post.description">
-  </ion-input>
-</ion-item>
-<div>
-  <ion-button (click)="submitPost()">Save</ion-button>
-</div>
+  <div>
+    <ion-select placeholder="Categoria" cancelText="Cancelar" okText="Ok">
+      <ion-select-option value="lanches">Lanches</ion-select-option>
+      <ion-select-option value="saladas">Saladas</ion-select-option>
+      <ion-select-option value="massas">Massas</ion-select-option>
+      <ion-select-option value="vegana">Vegana</ion-select-option>
+    </ion-select>
+    <ion-input placeholder="Titulo" clearInput [(ngModel)]="post.title"></ion-input>
+    <ion-textarea placeholder="Ingredientes" clearInput [(ngModel)]="post.description"></ion-textarea>
+    <ion-textarea placeholder="Modo de Preparo"></ion-textarea>
+  </div>
+  <div class="wrapper">
+    <div class="photoDiv">
+      <div class="imgDiv" (click)="choosePhotos()" *ngIf="post.photo == '' ">
+        <ion-icon name="add"></ion-icon>
+      </div>
+    </div>
+    <div *ngIf="post.photo != '' ">
+      <img src="{{ post.photo}}" />
+    </div>
+  </div>
+  <ion-button class="botaopostar" color="body" (click)="submitPost()" expand="full">Publicar</ion-button>
 </ion-content>
