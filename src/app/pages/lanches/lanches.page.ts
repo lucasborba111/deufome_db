@@ -40,8 +40,9 @@ export class LanchesPage implements OnInit {
         let post = {
           id: i,
           photo: element.photo,
-          title: element.title,
-          description: element.description,
+          titulo: element.titulo,
+          ingredientes: element.ingredientes,
+          modopreparo: element.modopreparo,
         }
         this.posts.push(post);
       }

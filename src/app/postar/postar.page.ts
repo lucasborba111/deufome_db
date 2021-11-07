@@ -39,8 +39,10 @@ export class PostarPage implements OnInit {
 
   post = {
     photo: '',
-    title: '',
-    description: '',
+    titulo: '',
+    ingredientes: '',
+    modopreparo: '',
+
   }
 
   posts = []
@@ -136,17 +138,17 @@ export class PostarPage implements OnInit {
 
   submitPost(){
     console.log('running');
-    if (this.post.photo == ''){
-      alert('insira a foto')
+    //if (this.post.photo == ''){
+      //alert('insira a foto')
 
-    }else{
-      if(this.post.title == ''){
-        alert('insira o titulo')
-      }else{
-        if(this.post.description == ''){
-          alert('insira a descrição')
+   // }else{
+     // if(this.post.title == ''){
+    //    alert('insira o titulo')
+    //  }else{
+     //   if(this.post.description == ''){
+      //    alert('insira a descrição')
 
-        }else{
+     //   }else{
          
          //inserindo no firebase
 
@@ -155,23 +157,11 @@ export class PostarPage implements OnInit {
            this.navCtrl.navigateRoot('home');
          });
          
-          //this.storage.get('postArray').then(res=>{
-           // console.log('res = ',res);
-          //  if(res ==null){
-            //  this.posts = [];
-           // }else{
-             // this.posts = res;
-           // }
-            //.posts.push(this.post);
-            //this.storage.set('postsArray', this.posts);
-            //console.log('array = ', this.posts);
-           // this.navCtrl.navigateRoot('home');
-          //})
         }
-      }
+    //  }
 
-    }
-  }
+   // }
+  //}
 
   async ngOnInit() {
     await this.storage.create();

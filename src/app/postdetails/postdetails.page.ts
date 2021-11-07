@@ -10,8 +10,9 @@ export class PostdetailsPage implements OnInit {
 
   post ={
     photo: '',
-    title: '',
-    description: '',
+    titulo: '',
+    ingredientes: '',
+    modopreparo: '',
   }
 
   constructor(
@@ -23,8 +24,9 @@ export class PostdetailsPage implements OnInit {
 
       data = JSON.parse(data);
       this.post.photo = data.photo;
-      this.post.title = data.title;
-      this.post.description = data.description;
+      this.post.titulo = data.titulo;
+      this.post.ingredientes = data.ingredientes;
+      this.post.modopreparo = data.modopreparo;
      }
 
   ngOnInit() {
