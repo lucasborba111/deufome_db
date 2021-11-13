@@ -110,7 +110,7 @@ let HomePage = class HomePage {
             autoplay: true,
         };
         this.option2 = {
-            slidesPerView: true,
+            slidesPerView: false,
             centeredSlides: false,
             loop: false,
             spaceBetween: 2,

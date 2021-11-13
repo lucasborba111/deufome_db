@@ -139,8 +139,9 @@ let PostarPage = class PostarPage {
         };
         this.post = {
             photo: '',
-            title: '',
-            description: '',
+            titulo: '',
+            ingredientes: '',
+            modopreparo: '',
         };
         this.posts = [];
     }
@@ -220,39 +221,24 @@ let PostarPage = class PostarPage {
     }
     submitPost() {
         console.log('running');
-        if (this.post.photo == '') {
-            alert('insira a foto');
-        }
-        else {
-            if (this.post.title == '') {
-                alert('insira o titulo');
-            }
-            else {
-                if (this.post.description == '') {
-                    alert('insira a descrição');
-                }
-                else {
-                    //inserindo no firebase
-                    firebase_app__WEBPACK_IMPORTED_MODULE_4__.default.database().ref('posts').push(this.post).then(res => {
-                        console.log('pushed', res);
-                        this.navCtrl.navigateRoot('home');
-                    });
-                    //this.storage.get('postArray').then(res=>{
-                    // console.log('res = ',res);
-                    //  if(res ==null){
-                    //  this.posts = [];
-                    // }else{
-                    // this.posts = res;
-                    // }
-                    //.posts.push(this.post);
-                    //this.storage.set('postsArray', this.posts);
-                    //console.log('array = ', this.posts);
-                    // this.navCtrl.navigateRoot('home');
-                    //})
-                }
-            }
-        }
+        //if (this.post.photo == ''){
+        //alert('insira a foto')
+        // }else{
+        // if(this.post.title == ''){
+        //    alert('insira o titulo')
+        //  }else{
+        //   if(this.post.description == ''){
+        //    alert('insira a descrição')
+        //   }else{
+        //inserindo no firebase
+        firebase_app__WEBPACK_IMPORTED_MODULE_4__.default.database().ref('posts').push(this.post).then(res => {
+            console.log('pushed', res);
+            this.navCtrl.navigateRoot('home');
+        });
     }
+    //  }
+    // }
+    //}
     ngOnInit() {
         return (0,tslib__WEBPACK_IMPORTED_MODULE_7__.__awaiter)(this, void 0, void 0, function* () {
             yield this.storage.create();
@@ -289,7 +275,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (".wrapper {\n  width: 90%;\n  margin: 10% auto;\n}\n\n.photoDiv {\n  width: 100%;\n  display: flex;\n  flex-direction: row;\n}\n\n.imgDiv {\n  width: 35%;\n  border-radius: 7px;\n  background: #e4e4e4;\n  display: flex;\n  height: 70px;\n  align-items: center;\n  justify-content: center;\n  margin-right: 10px;\n}\n\n.imgDiv ion-icon {\n  font-size: 30px;\n  color: black;\n}\n\n.formBody {\n  margin: 10% auto;\n}\n\nion-item {\n  margin-bottom: 5%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBvc3Rhci5wYWdlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxVQUFBO0VBQ0EsZ0JBQUE7QUFDRjs7QUFFQTtFQUNFLFdBQUE7RUFDQSxhQUFBO0VBQ0EsbUJBQUE7QUFDRjs7QUFFQTtFQUNFLFVBQUE7RUFDQSxrQkFBQTtFQUNBLG1CQUFBO0VBQ0EsYUFBQTtFQUNBLFlBQUE7RUFDQSxtQkFBQTtFQUNBLHVCQUFBO0VBQ0Esa0JBQUE7QUFDRjs7QUFFQTtFQUNFLGVBQUE7RUFDQSxZQUFBO0FBQ0Y7O0FBRUE7RUFDQSxnQkFBQTtBQUNBOztBQUNBO0VBQ0UsaUJBQUE7QUFFRiIsImZpbGUiOiJwb3N0YXIucGFnZS5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLndyYXBwZXJ7XHJcbiAgd2lkdGg6IDkwJTtcclxuICBtYXJnaW46IDEwJSBhdXRvO1xyXG59XHJcblxyXG4ucGhvdG9EaXZ7XHJcbiAgd2lkdGg6IDEwMCU7XHJcbiAgZGlzcGxheTogZmxleDtcclxuICBmbGV4LWRpcmVjdGlvbjogcm93O1xyXG59XHJcblxyXG4uaW1nRGl2e1xyXG4gIHdpZHRoOiAzNSU7XHJcbiAgYm9yZGVyLXJhZGl1czogN3B4O1xyXG4gIGJhY2tncm91bmQ6ICNlNGU0ZTQ7XHJcbiAgZGlzcGxheTogZmxleDtcclxuICBoZWlnaHQ6IDcwcHg7XHJcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcclxuICBtYXJnaW4tcmlnaHQ6IDEwcHg7XHJcbn1cclxuXHJcbi5pbWdEaXYgaW9uLWljb257XHJcbiAgZm9udC1zaXplOiAzMHB4O1xyXG4gIGNvbG9yOiBibGFjaztcclxufVxyXG5cclxuLmZvcm1Cb2R5e1xyXG5tYXJnaW46IDEwJSBhdXRvO1xyXG59XHJcbmlvbi1pdGVte1xyXG4gIG1hcmdpbi1ib3R0b206IDUlO1xyXG59Il19 */");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (".wrapper {\n  width: 90%;\n  margin: 10% auto;\n}\n\n.photoDiv {\n  width: 100%;\n  display: flex;\n  flex-direction: row;\n}\n\n.imgDiv {\n  width: 35%;\n  border-radius: 7px;\n  background: #e4e4e4;\n  display: flex;\n  height: 70px;\n  align-items: center;\n  justify-content: center;\n  margin-left: 70px;\n}\n\n.imgDiv ion-icon {\n  font-size: 30px;\n  color: black;\n}\n\n.formBody {\n  margin: 10% auto;\n}\n\nion-item {\n  margin-bottom: 5%;\n}\n\n#logo {\n  height: 120px;\n  width: 140px;\n  position: absolute;\n  right: 50%;\n  top: 58%;\n  transform: translate(50%, -50%);\n}\n\nion-content {\n  display: flex;\n  align-self: center;\n  --background: #ad0002;\n}\n\nion-input {\n  background-color: #f8f8f8;\n  border-radius: 5px;\n}\n\nion-textarea {\n  background-color: #f8f8f8;\n  border-radius: 5px;\n}\n\nion-select {\n  background-color: #f8f8f8;\n  margin-top: 30px;\n  margin-bottom: 8px;\n  border-radius: 5px;\n}\n\ndiv {\n  width: 80%;\n  margin-left: 35px;\n}\n\nion-button {\n  width: 50%;\n  display: flex;\n  margin-left: 90px;\n  font-family: BebasNeue-Regular;\n  font-size: 16px;\n  margin-top: 20px;\n  border-radius: 5px;\n}\n\n.botaopostar {\n  background-color: white;\n  color: #ad0002;\n}\n\nspan {\n  font-family: BebasNeue-Regular;\n  color: white;\n  font-size: 25px;\n}\n\n.texto {\n  text-align: center;\n  margin-top: 30px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBvc3Rhci5wYWdlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxVQUFBO0VBQ0EsZ0JBQUE7QUFDRjs7QUFFQTtFQUNFLFdBQUE7RUFDQSxhQUFBO0VBQ0EsbUJBQUE7QUFDRjs7QUFFQTtFQUNFLFVBQUE7RUFDQSxrQkFBQTtFQUNBLG1CQUFBO0VBQ0EsYUFBQTtFQUNBLFlBQUE7RUFDQSxtQkFBQTtFQUNBLHVCQUFBO0VBQ0EsaUJBQUE7QUFDRjs7QUFFQTtFQUNFLGVBQUE7RUFDQSxZQUFBO0FBQ0Y7O0FBRUE7RUFDQSxnQkFBQTtBQUNBOztBQUNBO0VBQ0UsaUJBQUE7QUFFRjs7QUFDQTtFQUNFLGFBQUE7RUFDQSxZQUFBO0VBQ0Esa0JBQUE7RUFDQSxVQUFBO0VBQ0EsUUFBQTtFQUNBLCtCQUFBO0FBRUY7O0FBQ0E7RUFFRSxhQUFBO0VBQ0Esa0JBQUE7RUFDQSxxQkFBQTtBQUNGOztBQUdBO0VBQ0UseUJBQUE7RUFDQSxrQkFBQTtBQUFGOztBQUVBO0VBQ0UseUJBQUE7RUFDQSxrQkFBQTtBQUNGOztBQUVBO0VBQ0UseUJBQUE7RUFDQSxnQkFBQTtFQUNBLGtCQUFBO0VBQ0Esa0JBQUE7QUFDRjs7QUFDQTtFQUNFLFVBQUE7RUFDQSxpQkFBQTtBQUVGOztBQUNBO0VBQ0UsVUFBQTtFQUNBLGFBQUE7RUFDQSxpQkFBQTtFQUNBLDhCQUFBO0VBQ0EsZUFBQTtFQUNBLGdCQUFBO0VBQ0Esa0JBQUE7QUFFRjs7QUFDQTtFQUNFLHVCQUFBO0VBQ0EsY0FBQTtBQUVGOztBQUNBO0VBQ0UsOEJBQUE7RUFDQSxZQUFBO0VBQ0EsZUFBQTtBQUVGOztBQUNBO0VBQ0Usa0JBQUE7RUFDQSxnQkFBQTtBQUVGIiwiZmlsZSI6InBvc3Rhci5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIud3JhcHBlcntcclxuICB3aWR0aDogOTAlO1xyXG4gIG1hcmdpbjogMTAlIGF1dG87XHJcbn1cclxuXHJcbi5waG90b0RpdntcclxuICB3aWR0aDogMTAwJTtcclxuICBkaXNwbGF5OiBmbGV4O1xyXG4gIGZsZXgtZGlyZWN0aW9uOiByb3c7XHJcbn1cclxuXHJcbi5pbWdEaXZ7XHJcbiAgd2lkdGg6IDM1JTtcclxuICBib3JkZXItcmFkaXVzOiA3cHg7XHJcbiAgYmFja2dyb3VuZDogI2U0ZTRlNDtcclxuICBkaXNwbGF5OiBmbGV4O1xyXG4gIGhlaWdodDogNzBweDtcclxuICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG4gIG1hcmdpbi1sZWZ0OiA3MHB4O1xyXG59XHJcblxyXG4uaW1nRGl2IGlvbi1pY29ue1xyXG4gIGZvbnQtc2l6ZTogMzBweDtcclxuICBjb2xvcjogYmxhY2s7XHJcbn1cclxuXHJcbi5mb3JtQm9keXtcclxubWFyZ2luOiAxMCUgYXV0bztcclxufVxyXG5pb24taXRlbXtcclxuICBtYXJnaW4tYm90dG9tOiA1JTtcclxufVxyXG5cclxuI2xvZ28ge1xyXG4gIGhlaWdodDogMTIwcHg7XHJcbiAgd2lkdGg6IDE0MHB4O1xyXG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICByaWdodDogNTAlO1xyXG4gIHRvcDogNTglO1xyXG4gIHRyYW5zZm9ybTogdHJhbnNsYXRlKDUwJSwtNTAlKTtcclxufVxyXG5cclxuaW9uLWNvbnRlbnR7XHJcblxyXG4gIGRpc3BsYXk6ZmxleDtcclxuICBhbGlnbi1zZWxmOiBjZW50ZXI7XHJcbiAgLS1iYWNrZ3JvdW5kOiAjYWQwMDAyO1xyXG5cclxufVxyXG5cclxuaW9uLWlucHV0e1xyXG4gIGJhY2tncm91bmQtY29sb3I6IHJnYigyNDgsIDI0OCwgMjQ4KTtcclxuICBib3JkZXItcmFkaXVzOiA1cHg7XHJcbn1cclxuaW9uLXRleHRhcmVhe1xyXG4gIGJhY2tncm91bmQtY29sb3I6IHJnYigyNDgsIDI0OCwgMjQ4KTtcclxuICBib3JkZXItcmFkaXVzOiA1cHg7XHJcbn1cclxuXHJcbmlvbi1zZWxlY3Qge1xyXG4gIGJhY2tncm91bmQtY29sb3I6IHJnYigyNDgsIDI0OCwgMjQ4KTtcclxuICBtYXJnaW4tdG9wOiAzMHB4O1xyXG4gIG1hcmdpbi1ib3R0b206IDhweDtcclxuICBib3JkZXItcmFkaXVzOiA1cHg7XHJcbn1cclxuZGl2e1xyXG4gIHdpZHRoOiA4MCU7XHJcbiAgbWFyZ2luLWxlZnQ6IDM1cHg7XHJcbn1cclxuXHJcbmlvbi1idXR0b257XHJcbiAgd2lkdGg6IDUwJTtcclxuICBkaXNwbGF5OiBmbGV4O1xyXG4gIG1hcmdpbi1sZWZ0OiA5MHB4O1xyXG4gIGZvbnQtZmFtaWx5OiBCZWJhc05ldWUtUmVndWxhcjtcclxuICBmb250LXNpemU6IDE2cHg7XHJcbiAgbWFyZ2luLXRvcDogMjBweDtcclxuICBib3JkZXItcmFkaXVzOiA1cHg7XHJcbn1cclxuXHJcbi5ib3Rhb3Bvc3RhcntcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZTtcclxuICBjb2xvcjogI2FkMDAwMjtcclxufVxyXG5cclxuc3BhbntcclxuICBmb250LWZhbWlseTogQmViYXNOZXVlLVJlZ3VsYXI7XHJcbiAgY29sb3I6IHdoaXRlO1xyXG4gIGZvbnQtc2l6ZTogMjVweDtcclxufVxyXG5cclxuLnRleHRve1xyXG4gIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICBtYXJnaW4tdG9wOiAzMHB4O1xyXG59XHJcbiAgXHJcbiJdfQ== */");
 
 /***/ }),
 
@@ -304,7 +290,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<ion-content>\r\n<div class=\"wrapper\">\r\n<div class=\"photoDiv\">\r\n  <div class=\"imgDiv\" (click)=\"choosePhotos()\" *ngIf=\"post.photo == '' \">\r\n    <ion-icon name=\"add\"></ion-icon>\r\n  </div>\r\n</div>\r\n\r\n<div *ngIf=\"post.photo != '' \">\r\n<img src=\"{{ post.photo}}\"/>\r\n</div>\r\n</div>\r\n\r\n<div class=\"formBody\">\r\n  <ion-item>\r\n    <ion-label position=\"floating\">Title</ion-label>\r\n    <ion-input type=\"text\" [(ngModel)]=\"post.title\">\r\n    </ion-input>\r\n  </ion-item>\r\n</div>\r\n<ion-item>\r\n  <ion-label position=\"floating\">description</ion-label>\r\n  <ion-input type=\"text\" [(ngModel)]=\"post.description\">\r\n  </ion-input>\r\n</ion-item>\r\n<div>\r\n  <ion-button (click)=\"submitPost()\">Save</ion-button>\r\n</div>\r\n</ion-content>\r\n");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<ion-header>\r\n  <ion-toolbar>\r\n    <ion-buttons slot=\"start\">\r\n      <ion-back-button defaultHref=\"home\"></ion-back-button>\r\n    </ion-buttons>\r\n    <ion-img src=\"../assets/logo.png\" id=\"logo\"></ion-img>\r\n  </ion-toolbar>\r\n</ion-header>\r\n<ion-content>\r\n  <div class=\"texto\">\r\n    <span>Poste sua Receita</span>\r\n  </div>\r\n  <div>\r\n    <ion-select placeholder=\"Categoria\" cancelText=\"Cancelar\" okText=\"Ok\">\r\n      <ion-select-option value=\"lanches\">Lanches</ion-select-option>\r\n      <ion-select-option value=\"saladas\">Saladas</ion-select-option>\r\n      <ion-select-option value=\"massas\">Massas</ion-select-option>\r\n      <ion-select-option value=\"vegana\">Vegana</ion-select-option>\r\n    </ion-select>\r\n    <ion-input placeholder=\"Titulo\" clearInput [(ngModel)]=\"post.titulo\"></ion-input>\r\n    <ion-textarea placeholder=\"Ingredientes\" clearInput [(ngModel)]=\"post.ingredientes\"></ion-textarea>\r\n    <ion-textarea placeholder=\"Modo de Preparo\" clearInput [(ngModel)]=\"post.modopreparo\"></ion-textarea>\r\n  </div>\r\n  <div class=\"wrapper\">\r\n    <div class=\"photoDiv\">\r\n      <div class=\"imgDiv\" (click)=\"choosePhotos()\" *ngIf=\"post.photo == '' \">\r\n        <ion-icon name=\"add\"></ion-icon>\r\n      </div>\r\n    </div>\r\n    <div *ngIf=\"post.photo != '' \">\r\n      <img src=\"{{ post.photo}}\" />\r\n    </div>\r\n  </div>\r\n  <ion-button class=\"botaopostar\" color=\"body\" (click)=\"submitPost()\" expand=\"full\">Publicar</ion-button>\r\n</ion-content>");
 
 /***/ })
 

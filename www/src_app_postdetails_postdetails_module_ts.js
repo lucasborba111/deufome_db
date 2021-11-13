@@ -107,15 +107,17 @@ let PostdetailsPage = class PostdetailsPage {
         this.activatedRoute = activatedRoute;
         this.post = {
             photo: '',
-            title: '',
-            description: '',
+            titulo: '',
+            ingredientes: '',
+            modopreparo: '',
         };
         let data = this.activatedRoute.snapshot.params['data'];
         console.log('reached = ', JSON.parse(data));
         data = JSON.parse(data);
         this.post.photo = data.photo;
-        this.post.title = data.title;
-        this.post.description = data.description;
+        this.post.titulo = data.titulo;
+        this.post.ingredientes = data.ingredientes;
+        this.post.modopreparo = data.modopreparo;
     }
     ngOnInit() {
     }
@@ -161,7 +163,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<ion-header>\n  <ion-toolbar>\n    <ion-title>postdetails</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n\n  <div class=\"wrapper\">\n    <div class=\"topBar\">\n      <img src=\"{{ post.photo }} \"/>\n    </div>\n  </div>\n\n  <div class=\"title\">\n  {{post.title}}\n  </div>\n\n  <div class=\"desc\">\n    {{post.description}}\n    </div>\n\n\n</ion-content>\n");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<ion-header>\r\n  <ion-toolbar>\r\n    <ion-title>postdetails</ion-title>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content>\r\n\r\n  <div class=\"wrapper\">\r\n    <div class=\"topBar\">\r\n      <img src=\"{{ post.photo }} \"/>\r\n    </div>\r\n  </div>\r\n\r\n  <div>\r\n  {{post.titulo}}\r\n  </div>\r\n\r\n  <div>\r\n    {{post.ingredientes}}\r\n    </div>\r\n\r\n    <div>\r\n      {{post.modopreparo}}\r\n      </div>\r\n\r\n\r\n</ion-content>\r\n");
 
 /***/ })
 
