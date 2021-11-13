@@ -13,8 +13,8 @@
 	<div>
 	  <ion-card class="wrapper" (click)="postDetails(post)" *ngFor="let post of posts">
 		<ion-card-header>
-		  <div class="topDiv">
-			<img src="{{post.photo}}" />
+		  <div >
+			<img src="{{post.photo}}"  class="topDiv"/>
 		  </div>
 		  <ion-card-title class="tituloreceitas">{{post.titulo}}</ion-card-title>
 		  <ion-card-subtitle>Por: USUARIO</ion-card-subtitle>

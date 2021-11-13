@@ -148,7 +148,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJwb3N0ZGV0YWlscy5wYWdlLnNjc3MifQ== */");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (".wrapper {\n  width: 90%;\n  margin: 10% auto;\n}\n\n.topDiv {\n  border-radius: 5px;\n  height: 200px;\n}\n\nion-icon {\n  font-size: 20px;\n}\n\n#logo {\n  height: 100px;\n  width: 130px;\n  position: absolute;\n  right: 50%;\n  top: 50%;\n  transform: translate(50%, -50%);\n}\n\n.titulo {\n  margin-top: -8%;\n  margin-left: -10px;\n  font-size: 15px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBvc3RkZXRhaWxzLnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLFVBQUE7RUFDQSxnQkFBQTtBQUNGOztBQUNBO0VBQ0Usa0JBQUE7RUFDQSxhQUFBO0FBRUY7O0FBQUE7RUFDRSxlQUFBO0FBR0Y7O0FBREE7RUFDRSxhQUFBO0VBQ0EsWUFBQTtFQUNBLGtCQUFBO0VBQ0EsVUFBQTtFQUNBLFFBQUE7RUFDQSwrQkFBQTtBQUlGOztBQUZBO0VBQ0EsZUFBQTtFQUNBLGtCQUFBO0VBQ0EsZUFBQTtBQUtBIiwiZmlsZSI6InBvc3RkZXRhaWxzLnBhZ2Uuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi53cmFwcGVye1xyXG4gIHdpZHRoOiA5MCU7XHJcbiAgbWFyZ2luOiAxMCUgYXV0bztcclxufVxyXG4udG9wRGl2e1xyXG4gIGJvcmRlci1yYWRpdXM6IDVweDtcclxuICBoZWlnaHQ6IDIwMHB4O1xyXG4gIH1cclxuaW9uLWljb257XHJcbiAgZm9udC1zaXplOiAyMHB4O1xyXG59XHJcbiNsb2dvIHtcclxuICBoZWlnaHQ6IDEwMHB4O1xyXG4gIHdpZHRoOiAxMzBweDtcclxuICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgcmlnaHQ6IDUwJTtcclxuICB0b3A6IDUwJTtcclxuICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSg1MCUsIC01MCUpO1xyXG59XHJcbi50aXR1bG97XHJcbm1hcmdpbi10b3A6LTglO1xyXG5tYXJnaW4tbGVmdDogLTEwcHggOyBcclxuZm9udC1zaXplOiAxNXB4O1xyXG59XHJcblxyXG5cclxuXHJcblxyXG5cclxuXHJcbiJdfQ== */");
 
 /***/ }),
 
@@ -163,7 +163,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<ion-header>\r\n  <ion-toolbar>\r\n    <ion-title>postdetails</ion-title>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content>\r\n\r\n  <div class=\"wrapper\">\r\n    <div class=\"topBar\">\r\n      <img src=\"{{ post.photo }} \"/>\r\n    </div>\r\n  </div>\r\n\r\n  <div>\r\n  {{post.titulo}}\r\n  </div>\r\n\r\n  <div>\r\n    {{post.ingredientes}}\r\n    </div>\r\n\r\n    <div>\r\n      {{post.modopreparo}}\r\n      </div>\r\n\r\n\r\n</ion-content>\r\n");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("<ion-header>\r\n  <ion-toolbar>\r\n    <ion-title>postdetails</ion-title>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content>\r\n\r\n\r\n\r\n\r\n\r\n<div>\r\n  <ion-card class=\"wrapper\">\r\n  <ion-card-header>\r\n    <div >\r\n      <img src=\"{{ post.photo }} \" class=\"topDiv\">\r\n    </div>     \r\n\r\n    <ion-card-title class=\"tituloreceitas\">Título: {{post.titulo}}\r\n    </ion-card-title>\r\n    <br>\r\n  </ion-card-header>\r\n  <ion-card-content>\r\n    <p>Ingredientes: {{post.ingredientes}}</p>\r\n\r\n   <p>Modo de Preparo: {{post.modopreparo}}</p>\r\n\r\n  </ion-card-content>\r\n  </ion-card>\r\n</div>\r\n\r\n\r\n\r\n</ion-content>\r\n");
 
 /***/ })
 

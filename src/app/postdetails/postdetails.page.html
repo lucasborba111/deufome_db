@@ -6,23 +6,30 @@
 
 <ion-content>
 
-  <div class="wrapper">
-    <div class="topBar">
-      <img src="{{ post.photo }} "/>
-    </div>
-  </div>
 
-  <div>
-  {{post.titulo}}
-  </div>
 
-  <div>
-    {{post.ingredientes}}
-    </div>
 
-    <div>
-      {{post.modopreparo}}
-      </div>
+
+<div>
+  <ion-card class="wrapper">
+  <ion-card-header>
+    <div >
+      <img src="{{ post.photo }} " class="topDiv">
+    </div>     
+
+    <ion-card-title class="tituloreceitas">Título: {{post.titulo}}
+    </ion-card-title>
+    <br>
+  </ion-card-header>
+  <ion-card-content>
+    <p>Ingredientes: {{post.ingredientes}}</p>
+
+   <p>Modo de Preparo: {{post.modopreparo}}</p>
+
+  </ion-card-content>
+  </ion-card>
+</div>
+
 
 
 </ion-content>
