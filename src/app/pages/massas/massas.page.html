@@ -8,6 +8,24 @@
 	</ion-toolbar>
   </ion-header>
   <ion-content>
+
+	<div *ngFor="let post of posts">
+		<ion-card class="wrapper" *ngIf="(post.tipo == 'massas')" (click)="postDetails(post)">
+		  <ion-card-header>
+			<div >
+			  <img src="{{post.photo}}"  class="topDiv"/>
+			</div>
+			<ion-card-title class="tituloreceitas">{{post.titulo}}</ion-card-title>
+			<ion-card-subtitle>Por: USUARIO</ion-card-subtitle>
+			<br>
+		  </ion-card-header>
+		  <ion-icon name="trash" (click)="deletePost(post)"></ion-icon>
+		</ion-card>
+	</div>
+
+
+
+
 	<div id="todos">
 	<ion-card id="cards" (click)="toggleHidden()">
 	  <ion-card-header>

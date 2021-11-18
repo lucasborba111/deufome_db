@@ -19,9 +19,7 @@ import { AuthService } from './services/auth.service';
 //auth guard
 import { AuthGuard } from './guards/auth.guard';
 import { WebView } from '@ionic-native/ionic-webview/ngx';
-import { Camera } from '@ionic-native/camera/ngx';
-
-
+import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 
 
 @NgModule({

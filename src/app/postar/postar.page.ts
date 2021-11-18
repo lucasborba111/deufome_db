@@ -5,8 +5,9 @@ import { AlertController, NavController } from '@ionic/angular';
 import firebase from 'firebase/app';
 import { Storage } from '@ionic/storage';
 import firebaseConfig from '../firebase/firebase';
-
+import { LoadingService } from '../loading.service';
 firebase.initializeApp(firebaseConfig);
+
 
 
 @Component({
@@ -15,8 +16,6 @@ firebase.initializeApp(firebaseConfig);
   styleUrls: ['./postar.page.scss'],
 })
 export class PostarPage implements OnInit {
-
-  
 
   cameraOptions: CameraOptions = {
     quality: 100,
@@ -38,11 +37,11 @@ export class PostarPage implements OnInit {
   }
 
   post = {
+    tipo: '',
     photo: '',
     titulo: '',
     ingredientes: '',
     modopreparo: '',
-
   }
 
   posts = []
@@ -54,6 +53,7 @@ export class PostarPage implements OnInit {
     private camera: Camera,
     private alertCtrl: AlertController,
     private navCtrl: NavController,
+    private loading : LoadingService,
     ) { }
 
   
@@ -69,6 +69,7 @@ export class PostarPage implements OnInit {
               let finalImg = this.webview.convertFileSrc(res);
               console.log('finalImg = ', finalImg);
               this.post.photo = finalImg;
+              this.uploadImage(finalImg);
             })
           }
         },
@@ -78,9 +79,10 @@ export class PostarPage implements OnInit {
             this.camera.getPicture(this.galleryOptions).then(res=>{
               console.log('response =', res);
               let finalImg = this.webview.convertFileSrc(res);
-              console.log('finalImg = ', finalImg);
               this.post.photo = finalImg;
               this.uploadImage(finalImg);
+              console.log('finalImg = ', finalImg);
+
             })
           }
         },
@@ -121,7 +123,7 @@ export class PostarPage implements OnInit {
         callback(reader.result);
       }
       reader.readAsDataURL(xhr.response);
-    },
+    };
     xhr.open('GET', url);
     xhr.responseType = 'blob';
     xhr.send();
@@ -138,30 +140,33 @@ export class PostarPage implements OnInit {
 
   submitPost(){
     console.log('running');
-    //if (this.post.photo == ''){
-      //alert('insira a foto')
 
-   // }else{
-     // if(this.post.title == ''){
-    //    alert('insira o titulo')
-    //  }else{
-     //   if(this.post.description == ''){
-      //    alert('insira a descrição')
-
-     //   }else{
-         
+    if(this.post.photo == ''){
+      this.loading.presentToast('Por favor adicione uma imagem');
+    }else{
+      if(this.post.titulo == ''){
+        this.loading.presentToast('Por favor adicione um titulo')
+      }else{
+        if(this.post.ingredientes == ''){
+          this.loading.presentToast('Por favor adicione os ingredientes');
+        }else{
+          if(this.post.modopreparo == ''){
+            this.loading.presentToast('Por favor adicione o modo de preparo');
+          }else{
+            if(this.post.tipo == ''){
+              this.loading.presentToast('Por favor selecione a categoria');
+            }else{
          //inserindo no firebase
-
          firebase.database().ref('posts').push(this.post).then(res=>{
            console.log('pushed', res);
            this.navCtrl.navigateRoot('home');
-         });
-         
+         });     
+          }
         }
-    //  }
-
-   // }
-  //}
+      }
+    }
+  }
+}
 
   async ngOnInit() {
     await this.storage.create();

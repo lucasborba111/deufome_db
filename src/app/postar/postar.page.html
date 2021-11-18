@@ -11,7 +11,7 @@
     <span>Poste sua Receita</span>
   </div>
   <div>
-    <ion-select placeholder="Categoria" cancelText="Cancelar" okText="Ok">
+    <ion-select placeholder="Categoria" clearInput [(ngModel)]="post.tipo"   cancelText="Cancelar" okText="Ok">
       <ion-select-option value="lanches">Lanches</ion-select-option>
       <ion-select-option value="saladas">Saladas</ion-select-option>
       <ion-select-option value="massas">Massas</ion-select-option>
@@ -28,7 +28,7 @@
       </div>
     </div>
     <div *ngIf="post.photo != '' ">
-      <img src="{{ post.photo}}" />
+      <img src="{{ post.photo }}" />
     </div>
   </div>
   <ion-button class="botaopostar" color="body" (click)="submitPost()" expand="full">Publicar</ion-button>

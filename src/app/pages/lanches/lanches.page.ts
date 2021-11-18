@@ -23,8 +23,6 @@ export class LanchesPage implements OnInit {
       })
     }
 
-
-
   ionViewWillEnter(){
     this.fetchPosts();
   }
@@ -39,29 +37,23 @@ export class LanchesPage implements OnInit {
         var element = result[i];
         let post = {
           id: i,
+          tipo: element.tipo,
           photo: element.photo,
           titulo: element.titulo,
           ingredientes: element.ingredientes,
           modopreparo: element.modopreparo,
         }
-        this.posts.push(post);
+        if(post.tipo=='lanches'){
+          this.posts.push(post); 
+        }
       }
       console.log('this.posts = ', this.posts);
     })
-    
-    //this.posts = [];
-    //this.storage.get('postsArray').then(res =>{
-      //console.log('postsArray', res);
-      //this.posts = res;
-    //})
+
   }
   
   postDetails(post){
     this.navCtrl.navigateForward(['postdetails', {data: JSON.stringify(post)}])
-  }
-
-  addArticle(){
-    this.navCtrl.navigateForward('add');
   }
   
   async ngOnInit() {
