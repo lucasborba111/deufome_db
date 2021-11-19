@@ -1,18 +1,7 @@
-.wrapper{
-  width: 90%;
-  margin: 10% auto;
-}
-.topDiv{
-  border-radius: 5px;
-  height: 200px;
-  }
 ion-icon{
   font-size: 25px;
   display: flex;
-  text-align: end;
-  align-content: flex-end;
-  align-self: flex-end;
-  align-items: flex-end;
+
 }
 #logo {
   height: 100px;
@@ -22,12 +11,39 @@ ion-icon{
   top: 50%;
   transform: translate(50%, -50%);
 }
-.titulo{
-margin-top:-8%;
-margin-left: -10px ; 
-font-size: 15px;
+.conteudo{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
 }
-
+.img{
+  width: 95%;
+  border-radius: 5px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  
+}
+.titulo{
+  font-size: 24px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.usuario{
+  font-size: 15px;
+  color: gray;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+.imgingredientes{
+  width: 192px;
+  height: 39px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-top: 25px;
+}
 
 
 

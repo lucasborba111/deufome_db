@@ -1,35 +1,18 @@
 <ion-header>
   <ion-toolbar>
-    <ion-icon name="trash" (click)="deletePost(post)"></ion-icon>
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet" />
+    <ion-icon name="trash-outline" (click)="deletePost(post)"></ion-icon>
     <ion-img src="../assets/logo.png" id="logo"></ion-img>
   </ion-toolbar>
 </ion-header>
-
 <ion-content>
-
-
-
-
-
-<div>
-  <ion-card class="wrapper">
-  <ion-card-header>
-    <div >
-      <img src="{{ post.photo }} " class="topDiv">
-    </div>     
-
-    <ion-card-title class="tituloreceitas">Título: {{post.titulo}}
-    </ion-card-title>
-    <br>
-  </ion-card-header>
-  <ion-card-content>
-    <p>Ingredientes: {{post.ingredientes}}</p>
-
-   <p>Modo de Preparo: {{post.modopreparo}}</p>
-
-  </ion-card-content>
-  </ion-card>
-</div>
+  <div class="conteudo">
+    <img src="{{ post.photo }}" class="img">
+    <span class="titulo">{{ post.titulo }}</span>
+    <span class="usuario">Por: André</span>
+    <img src="../assets/iconeingredientes.png" class="imgingredientes">
+    <p><i class="icon ion-md-restaurant">{{ post.ingredientes}}</i></p>
+  </div>
 
 
 
