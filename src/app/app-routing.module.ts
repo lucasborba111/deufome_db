@@ -53,10 +53,6 @@ const routes: Routes = [
     loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
   },
   {
-    path: 'topreceitas',
-    loadChildren: () => import('./pages/topreceitas/topreceitas.module').then( m => m.TopreceitasPageModule)
-  },
-  {
     path: 'postdetails',
     loadChildren: () => import('./postdetails/postdetails.module').then( m => m.PostdetailsPageModule)
   },

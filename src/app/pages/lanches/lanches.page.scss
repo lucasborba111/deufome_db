@@ -1,27 +1,79 @@
-
-.topDiv{
-border-radius: 5px;
+#todos{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
 }
-
-ion-icon{
-  font-size: 20px;
+ion-card-header{
+  width:100%
+}
+ion-content{
+  width:100%;
 }
 #logo {
-  height: 100px;
-  width: 130px;
-  position: absolute;
-  right: 50%;
-  top: 50%;
-  transform: translate(50%, -50%);
-}
-.titulo{
-margin-top:-8%;
-margin-left: -10px ; 
-font-size: 15px;
-}
-
-
-
-
-
-
+    height: 100px;
+    width: 130px;
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    transform: translate(50%, -50%);
+  }
+  //CONFIGURAÇÃO DO CARD
+  .cards{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 330px;
+   }
+  
+  //----------------------------------------
+  //FONTES
+  .tituloreceitas{
+  color: rgb(0, 0, 0);
+  font-family: Calibri;
+  
+  }
+  
+  .fonteingredientes{
+  font-family: monospace;
+  margin-left: -10px;
+  }
+  
+  .titulo{
+ 
+  font-size: 15px;
+  }
+  
+  //----------------------------
+  
+  //IMAGENS
+  .img{
+  border-radius: 5px;
+  width: 100%;
+  height: 200px;
+   
+  }
+  .ios .img{
+  border-radius: 5px;
+  width: 100%;
+  height: 200px;
+  }
+  //------------------
+  
+  
+  .iconeingredientes{
+  width: 150px;
+  margin-left: 85px;
+  }
+  
+  .iconepreparo{
+  width: 190px;
+  margin-left: 70px;
+  }
+  
+  .ion-md-restaurant{
+  font-size: 16px;
+  }
+  --ion-card-content{
+    align-items: center;
+  }
