@@ -46,6 +46,7 @@ fetchPosts(){
           titulo: element.titulo,
           ingredientes: element.ingredientes,
           modopreparo: element.modopreparo,
+          usuario:element.usuario,
         }
         if(post.tipo=='veganas'){
           this.posts.push(post); 

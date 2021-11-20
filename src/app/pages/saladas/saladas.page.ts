@@ -46,6 +46,7 @@ fetchPosts(){
           titulo: element.titulo,
           ingredientes: element.ingredientes,
           modopreparo: element.modopreparo,
+          usuario:element.usuario,
         }
         if(post.tipo=='saladas'){
           this.posts.push(post); 
