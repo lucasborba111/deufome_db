@@ -42,6 +42,7 @@ export class LanchesPage implements OnInit {
           titulo: element.titulo,
           ingredientes: element.ingredientes,
           modopreparo: element.modopreparo,
+          usuario:element.usuario,
         }
         if(post.tipo=='lanches'){
           this.posts.push(post); 

@@ -6,6 +6,8 @@ import firebase from 'firebase/app';
 import { Storage } from '@ionic/storage';
 import firebaseConfig from '../firebase/firebase';
 import { LoadingService } from '../loading.service';
+import { AuthService } from '../services/auth.service';
+
 firebase.initializeApp(firebaseConfig);
 
 
@@ -16,6 +18,8 @@ firebase.initializeApp(firebaseConfig);
   styleUrls: ['./postar.page.scss'],
 })
 export class PostarPage implements OnInit {
+
+
 
   cameraOptions: CameraOptions = {
     quality: 100,
@@ -42,6 +46,7 @@ export class PostarPage implements OnInit {
     titulo: '',
     ingredientes: '',
     modopreparo: '',
+    usuario: '',
   }
 
   posts = []
@@ -54,6 +59,7 @@ export class PostarPage implements OnInit {
     private alertCtrl: AlertController,
     private navCtrl: NavController,
     private loading : LoadingService,
+    private auth: AuthService,
     ) { }
 
   
@@ -140,33 +146,37 @@ export class PostarPage implements OnInit {
 
   submitPost(){
     console.log('running');
-
-    if(this.post.photo == ''){
-      this.loading.presentToast('Por favor adicione uma imagem');
-    }else{
-      if(this.post.titulo == ''){
-        this.loading.presentToast('Por favor adicione um titulo')
-      }else{
-        if(this.post.ingredientes == ''){
-          this.loading.presentToast('Por favor adicione os ingredientes');
-        }else{
-          if(this.post.modopreparo == ''){
-            this.loading.presentToast('Por favor adicione o modo de preparo');
-          }else{
-            if(this.post.tipo == ''){
-              this.loading.presentToast('Por favor selecione a categoria');
-            }else{
+    this.auth.user$.subscribe(user =>{
+      this.post.usuario = JSON.stringify(user.userName);
+    
+   // if(this.post.photo == ''){
+      //this.loading.presentToast('Por favor adicione uma imagem');
+   // }
+   //else{
+     // if(this.post.titulo == ''){
+      //  this.loading.presentToast('Por favor adicione um titulo')
+     // }else{
+      //  if(this.post.ingredientes == ''){
+       //   this.loading.presentToast('Por favor adicione os ingredientes');
+       // }else{
+        //  if(this.post.modopreparo == ''){
+        //    this.loading.presentToast('Por favor adicione o modo de preparo');
+        //  }else{
+          //  if(this.post.tipo == ''){
+          //    this.loading.presentToast('Por favor selecione a categoria');
+           // }else{
          //inserindo no firebase
          firebase.database().ref('posts').push(this.post).then(res=>{
            console.log('pushed', res);
            this.navCtrl.navigateRoot('home');
          });     
+         })
           }
-        }
-      }
-    }
-  }
-}
+        //}
+     // }
+  //  }
+//  }
+//}
 
   async ngOnInit() {
     await this.storage.create();
