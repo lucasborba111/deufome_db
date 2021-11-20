@@ -14,10 +14,9 @@
 		  <ion-card-header>
 			  <img src="{{post.photo}}"  class="img"/>
 			<ion-card-title class="tituloreceitas">{{post.titulo}}</ion-card-title>
-			<ion-card-subtitle>Por: USUARIO</ion-card-subtitle>
+			<ion-card-subtitle>Por: {{post.usuario}}</ion-card-subtitle>
 			<br>
 		  </ion-card-header>
-		  <ion-icon name="trash" (click)="deletePost(post)"></ion-icon>
 		</ion-card>
 	</div>
 
