@@ -1,35 +1,27 @@
-.wrapper{
-  width: 90%;
-  margin: 10% auto;
-}
-
-.photoDiv{
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-}
-
 .imgDiv{
-  width: 35%;
+  width: 45%;
   border-radius: 7px;
   background: #e4e4e4;
   display: flex;
   height: 70px;
   align-items: center;
   justify-content: center;
-  margin-left: 70px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-top: 10px;
+
 }
 
 .imgDiv ion-icon{
   font-size: 30px;
   color: black;
+ 
 }
 
-.formBody{
-margin: 10% auto;
-}
-ion-item{
-  margin-bottom: 5%;
+
+
+ion-content{
+  --background: #ad0002;
 }
 
 #logo {
@@ -41,57 +33,57 @@ ion-item{
   transform: translate(50%,-50%);
 }
 
-ion-content{
-
-  display:flex;
-  align-self: center;
-  --background: #ad0002;
-
-}
-
 ion-input{
   background-color: rgb(248, 248, 248);
   border-radius: 5px;
+  width: 45%;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-top: 10px;
 }
 ion-textarea{
   background-color: rgb(248, 248, 248);
   border-radius: 5px;
+  width: 45%;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-top: 10px;
+
 }
 
 ion-select {
   background-color: rgb(248, 248, 248);
-  margin-top: 30px;
-  margin-bottom: 8px;
+  margin-top: 10px;
   border-radius: 5px;
-}
-div{
-  width: 80%;
-  margin-left: 35px;
+  width: 45%;
+  margin-left: 50%;
+  transform: translateX(-50%);
 }
 
 ion-button{
-  width: 50%;
+  width: 45%;
   display: flex;
-  margin-left: 90px;
   font-family: BebasNeue-Regular;
   font-size: 16px;
-  margin-top: 20px;
   border-radius: 5px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-top: 10px;
+
 }
 
 .botaopostar{
   background-color: white;
   color: #ad0002;
+  margin-left: 50%;
+  transform: translateX(-50%);
 }
 
-span{
-  font-family: BebasNeue-Regular;
-  color: white;
-  font-size: 25px;
-}
-
-.texto{
+p{
   text-align: center;
+  font-family: BebasNeue-Regular;
   margin-top: 30px;
+  font-size: 25px;
+  color: white;
 }
-  
+

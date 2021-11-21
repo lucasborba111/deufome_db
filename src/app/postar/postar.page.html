@@ -7,10 +7,10 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
-  <div class="texto">
-    <span>Poste sua Receita</span>
-  </div>
-  <div>
+
+    <p class="texto">Poste sua Receita</p>
+ 
+
     <ion-select placeholder="Categoria" clearInput [(ngModel)]="post.tipo"   cancelText="Cancelar" okText="Ok">
       <ion-select-option value="lanches">Lanches</ion-select-option>
       <ion-select-option value="saladas">Saladas</ion-select-option>
@@ -20,16 +20,17 @@
     <ion-input placeholder="Titulo" clearInput [(ngModel)]="post.titulo"></ion-input>
     <ion-textarea placeholder="Ingredientes" clearInput [(ngModel)]="post.ingredientes"></ion-textarea>
     <ion-textarea placeholder="Modo de Preparo" clearInput [(ngModel)]="post.modopreparo"></ion-textarea>
-  </div>
-  <div class="wrapper">
-    <div class="photoDiv">
+ 
+
+ 
       <div class="imgDiv" (click)="choosePhotos()" *ngIf="post.photo == '' ">
         <ion-icon name="add"></ion-icon>
-      </div>
+  
     </div>
     <div *ngIf="post.photo != '' ">
       <img src="{{ post.photo }}" />
     </div>
-  </div>
+  
   <ion-button class="botaopostar" color="body" (click)="submitPost()" expand="full">Publicar</ion-button>
+
 </ion-content>
