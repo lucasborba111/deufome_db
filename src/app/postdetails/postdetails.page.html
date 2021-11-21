@@ -1,6 +1,9 @@
 <ion-header>
   <ion-toolbar>
     <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet" />
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="lanches"></ion-back-button>
+    </ion-buttons>
     <ion-icon name="trash-outline" (click)="deletePost(post)"></ion-icon>
     <ion-img src="../assets/logo.png" id="logo"></ion-img>
   </ion-toolbar>
@@ -11,7 +14,9 @@
     <span class="titulo">{{ post.titulo }}</span>
     <span class="usuario">Por: {{post.usuario}}</span>
     <img src="../assets/iconeingredientes.png" class="imgingredientes">
-    <p><i class="icon ion-md-restaurant">{{ post.ingredientes}}</i></p>
+    <p><i class="icon ion-md-restaurant"></i>{{ post.ingredientes }}</p>
+    <img src="../assets/iconepreparo.png" class="imgpreparo">
+    <p><i class="icon ion-md-restaurant"></i>{{ post.modopreparo }}</p>
   </div>
 
 

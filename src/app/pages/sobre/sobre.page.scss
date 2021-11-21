@@ -36,3 +36,7 @@ span{
     margin-left: 50%;
     transform: translateX(-50%);
 }
+
+ion-content.background{
+    --background: url(/assets/fundo.png);
+}

@@ -1,6 +1,9 @@
 ion-icon{
   font-size: 25px;
   display: flex;
+  margin-left: auto;
+  margin-right: 10px;
+
 
 }
 #logo {
@@ -44,6 +47,27 @@ ion-icon{
   display: block;
   margin-top: 25px;
 }
+
+.imgpreparo{
+  width: 215px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+p{
+  color: rgb(87, 87, 87);
+  font-size: 17px;
+  font-family: Louis George Cafe;
+  margin-left: 5px;
+}
+
+i{
+  color: red;
+  padding-right: 10px;
+  margin-left: 5px;
+}
+  
 
 
 
