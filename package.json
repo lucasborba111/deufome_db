@@ -95,11 +95,8 @@
       "cordova-plugin-device": {},
       "cordova-plugin-splashscreen": {},
       "cordova-plugin-ionic-keyboard": {},
-<<<<<<< HEAD
-      "cordova-plugin-file": {}
-=======
+      "cordova-plugin-file": {},
       "cordova-plugin-whitelist": {}
->>>>>>> be517c065175c425db6918c649e9f6b183399d33
     },
     "platforms": [
       "android"

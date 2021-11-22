@@ -1,27 +1,35 @@
+.wrapper{
+  width: 90%;
+  margin: 10% auto;
+}
+
+.photoDiv{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
 .imgDiv{
-  width: 45%;
+  width: 35%;
   border-radius: 7px;
   background: #e4e4e4;
   display: flex;
   height: 70px;
   align-items: center;
   justify-content: center;
-  margin-left: 50%;
-  transform: translateX(-50%);
-  margin-top: 10px;
-
+  margin-left: 70px;
 }
 
 .imgDiv ion-icon{
   font-size: 30px;
   color: black;
- 
 }
 
-
-
-ion-content{
-  --background: #ad0002;
+.formBody{
+margin: 10% auto;
+}
+ion-item{
+  margin-bottom: 5%;
 }
 
 #logo {
@@ -33,66 +41,60 @@ ion-content{
   transform: translate(50%, -50%);
 }
 
+ion-content{
+
+  display:flex;
+  align-self: center;
+  --background: #ad0002;
+
+}
+
 ion-input{
   background-color: rgb(248, 248, 248);
   border-radius: 5px;
-  width: 45%;
-  margin-left: 50%;
-  transform: translateX(-50%);
-  margin-top: 10px;
 }
 ion-textarea{
   background-color: rgb(248, 248, 248);
   border-radius: 5px;
-  width: 45%;
-  margin-left: 50%;
-  transform: translateX(-50%);
-  margin-top: 10px;
-
 }
 
 ion-select {
   background-color: rgb(248, 248, 248);
-  margin-top: 10px;
+  margin-top: 30px;
+  margin-bottom: 8px;
   border-radius: 5px;
-  width: 45%;
-  margin-left: 50%;
-  transform: translateX(-50%);
+}
+div{
+  width: 80%;
+  margin-left: 35px;
 }
 
 ion-button{
-  width: 45%;
+  width: 50%;
   display: flex;
+  margin-left: 90px;
   font-family: BebasNeue-Regular;
   font-size: 16px;
+  margin-top: 20px;
   border-radius: 5px;
-  margin-left: 50%;
-  transform: translateX(-50%);
-  margin-top: 10px;
-
 }
-
+ 
 .botaopostar{
   background-color: white;
   color: #ad0002;
-  margin-left: 50%;
-  transform: translateX(-50%);
 }
 
-p{
-  text-align: center;
+span{
   font-family: BebasNeue-Regular;
-  margin-top: 30px;
-  font-size: 25px;
   color: white;
+  font-size: 25px;
 }
 
-<<<<<<< HEAD
 .texto{
   text-align: center;
   margin-top: 30px;
 }
-
+  
 .aviso{
   display: block;
   text-align: center;
@@ -105,6 +107,3 @@ p{
 i{
   padding-right: 5px;
 }
-  
-=======
->>>>>>> be517c065175c425db6918c649e9f6b183399d33
