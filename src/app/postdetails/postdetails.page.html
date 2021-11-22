@@ -3,10 +3,13 @@
     <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet" />
     <ion-buttons slot="start">
       <ion-back-button defaultHref="lanches"></ion-back-button>
-    </ion-buttons>
-    <ion-icon name="trash-outline" (click)="deletePost(post)"></ion-icon>
-    <ion-img src="../assets/logo.png" id="logo"></ion-img>
+      <ion-icon name="trash-outline" (click)="deletePost(post)"></ion-icon>
+  
+      <ion-title>{{post.titulo}}</ion-title>
+      </ion-buttons>
   </ion-toolbar>
+ 
+  
 </ion-header>
 <ion-content>
   <div class="conteudo">
