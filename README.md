@@ -40,11 +40,10 @@ O que é DeuFome?
 =================
 
 <!--ts-->
-   * DeuFome é uma forma divertida de:
-      * Visualizar receitas
-      * Postá-las
-      * Avaliá-las
-   <h3>Gratuito!</h3>
+   * DeuFome é uma forma gratuita e divertida de:
+      * Visualizar 
+      * Postar 
+      * Avaliar receitas
 <!--te-->
       
       
