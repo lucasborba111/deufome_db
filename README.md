@@ -1,9 +1,9 @@
-<h1 align="center">
-    DeuFome
-</h1>
-<h4 align="center">👩‍🍳Aplicativo web para cozinheiros 👨‍🍳</h4>
-<p align="center"><img src="https://github.com/lucasborba111/deufome_db/blob/master/src/assets/Capturar.PNG"/><p>
-  
+
+  <img src="https://github.com/lucasborba111/deufome_db/blob/master/src/assets/logo.png"/>
+  <h4>👩‍🍳Aplicativo web para cozinheiros 👨‍🍳</h4>
+
+---------------------
+
 Tabela de conteúdos
 =================
   
@@ -38,6 +38,7 @@ Tabela de conteúdos
       
 O que é DeuFome?
 =================
+
 <!--ts-->
    * DeuFome é uma forma divertida de:
       * Visualizar receitas
@@ -45,3 +46,10 @@ O que é DeuFome?
       * Avaliá-las
    <h3>Gratuito!</h3>
 <!--te-->
+      
+      
+      
+<h1 align="center">
+    Demonstração
+</h1>
+<p align="center"><img src="https://github.com/lucasborba111/deufome_db/blob/master/src/assets/Capturar.PNG"/><p>
