@@ -12,6 +12,7 @@ Tabela de conteúdos
   <tr>
     <th><h3>Páginas:<h3></th>
     <th><h3>Vantagens:<h3></th>
+      <th><h3>Dinâmica:<h3></th>
   </tr>
   <tr>
     <td>  <p>
@@ -25,6 +26,12 @@ Tabela de conteúdos
        Agilidade<br>
        Praticidade<br>
     </p></td>
+    <td>  <p>
+       Responsivo a qualquer sistema operacional<br>
+       Possui ótima organização<br>
+       Aprenda a cozinhar<br>
+       <br>
+    </p></td>
   </tr>
   
 </table>
@@ -34,7 +41,7 @@ O que é DeuFome?
 <!--ts-->
    * DeuFome é uma forma divertida de:
       * Visualizar receitas
-      * Posta-las
-      * Avalia-las
+      * Postá-las
+      * Avaliá-las
    <h3>Gratuito!</h3>
 <!--te-->
