@@ -52,3 +52,8 @@ O que é DeuFome?
     Demonstração
 </h1>
 <p align="center"><img src="https://github.com/lucasborba111/deufome_db/blob/master/src/assets/Capturar.PNG"/><p>
+   
+ ## 🦸 Autores
+
+<a href="https://github.com/DedeApenas"><img src="https://github.com/DedeApenas/forREADME/blob/main/Group%203%20(1).png">
+  <a href="https://github.com/lucasborba111"><img src="https://github.com/DedeApenas/forREADME/blob/main/Group%203%20(2).png">
