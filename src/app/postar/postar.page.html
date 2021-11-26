@@ -11,7 +11,7 @@
   <div class="texto">
     <span>Poste sua Receita</span>
   </div>
-  <div>
+  <div class="form">
     <ion-select interface="popover" placeholder="Categoria" clearInput [(ngModel)]="post.tipo" cancelText="Cancelar" okText="Ok">
       <ion-select-option value="lanches">Lanches</ion-select-option>
       <ion-select-option value="saladas">Saladas</ion-select-option>
@@ -24,12 +24,10 @@
   </div>
   <span class="aviso"><i class="icon ion-md-alert"></i>Use a virgula para separar os ingredientes e o modo de preparo!</span>
   <div class="wrapper">
-    <div class="photoDiv">
       <div class="imgDiv" (click)="openGalery()" *ngIf="post.photo == '' ">
         <ion-icon name="add"></ion-icon>
       </div>
       {{downloadUrl | async}}
-    </div>
     <div *ngIf="post.photo != '' ">
       <img src="{{ post.photo }}" />
     </div>
