@@ -12,6 +12,7 @@
 #cards{
   justify-content: center;
 }
+
 ion-grid{
   display: flex;
   flex-direction: row;
@@ -143,6 +144,27 @@ ion-slides {
   color: #313131;
   font-family: BebasNeue-Regular;
 }
+
+.ios ion-card-title{
+  font-family: Roboto, Helvetica Neue, sans-serif;
+  font-size: 20px;
+  color: #262626;
+  font-weight: normal;
+  margin-bottom: 7px;
+  margin-top: 7px;
+}
+
+.ios ion-card-subtitle{
+  font-family: Roboto, Helvetica Neue, sans-serif;
+  font-size: 14px;
+  color: #737373;
+  font-weight: normal;
+  margin: 8px, 0px, 0px;
+  text-transform: none;
+}
+
+
+
 
 
 

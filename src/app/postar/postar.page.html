@@ -9,7 +9,7 @@
 </ion-header>
 <ion-content>
   <div class="texto">
-    <span >Poste sua Receita</span>
+    <span>Poste sua Receita</span>
   </div>
   <div>
     <ion-select interface="popover" placeholder="Categoria" clearInput [(ngModel)]="post.tipo" cancelText="Cancelar" okText="Ok">
@@ -28,12 +28,11 @@
       <div class="imgDiv" (click)="openGalery()" *ngIf="post.photo == '' ">
         <ion-icon name="add"></ion-icon>
       </div>
+      {{downloadUrl | async}}
     </div>
     <div *ngIf="post.photo != '' ">
       <img src="{{ post.photo }}" />
     </div>
   </div>
-  <div>
-    <ion-button class="botaopostar" color="body" (click)="submitPost()" expand="full">Publicar</ion-button>
-  </div>
+  <ion-button class="botaopostar" color="body" (click)="submitPost()" expand="full">Publicar</ion-button>
 </ion-content> 

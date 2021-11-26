@@ -4,6 +4,15 @@
   flex-wrap: wrap;
   width: 100%;
 }
+
+.ios #todos{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+
 ion-card-header{
   width:100%
 }
@@ -20,23 +29,52 @@ ion-content{
   }
   //CONFIGURAÇÃO DO CARD
   .cards{
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  width: 330px;
-   }
+    width: 330px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .ios .cards{
+    width: 330px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .teste{
+    width: 330px;
+    margin: auto;
+  }
+
+  .ios .teste{
+    width: 330px;
+    margin: auto;
+  }
   
   //----------------------------------------
   //FONTES
   .tituloreceitas{
-  color: rgb(0, 0, 0);
-  font-family: Calibri;
-  
+    color: rgb(0, 0, 0);
+    font-family: Calibri;
+  }
+
+ .ios .tituloreceitas{
+    color: rgb(0, 0, 0);
+    font-family: Calibri;
+    font-size: 20px;
+    font-weight: normal;
   }
   
   .fonteingredientes{
   font-family: monospace;
   margin-left: -10px;
+  }
+
+
+  .ios .fonteusuario{
+    font-family: Roboto, Helvetica Neue, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    text-transform: none;
+    margin-top: 7px;
   }
   
   .titulo{

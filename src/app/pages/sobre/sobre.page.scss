@@ -19,13 +19,13 @@ h2 {
 }
 
 .titulo2{
-    color: #222;
+    color: rgb(255, 255, 255);
     margin-top: 30px;
     font-family: BebasNeue-Regular;
 }
 
 span{
-    color: #222;
+    color: rgb(255, 255, 255);
     font-family: monospace;
 }
 
@@ -37,6 +37,6 @@ span{
     transform: translateX(-50%);
 }
 
-ion-content.background{
-    --background: url(/assets/fundo.png);
+ion-content{
+    --ion-background-color:#ad0002;
 }

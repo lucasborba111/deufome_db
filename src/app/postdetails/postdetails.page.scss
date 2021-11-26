@@ -20,12 +20,12 @@ ion-icon{
   flex-direction: column;
 }
 .img{
-  width: 95%;
-  border-radius: 5px;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 15px;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
   
 }
 .titulo{
@@ -67,7 +67,8 @@ i{
   padding-right: 10px;
   margin-left: 5px;
 }
-  
+
+
 
 
 
