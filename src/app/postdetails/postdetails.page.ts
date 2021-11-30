@@ -10,6 +10,7 @@ export class PostdetailsPage implements OnInit {
 
   post ={
     id:'',
+    tipo: '',
     usuario:'',
     photo: '',
     titulo: '',
@@ -18,7 +19,7 @@ export class PostdetailsPage implements OnInit {
   }
 
   @Input() numStars: number = 5;
-  @Input() value: number = 4;
+  @Input() value: number = 1;
   @Output() ionClick: EventEmitter<number> = new EventEmitter<number>();
   stars: string[] = [];
 
@@ -32,6 +33,7 @@ export class PostdetailsPage implements OnInit {
 
       data = JSON.parse(data);
       this.post.id = data.id;
+      this.post.tipo = data.tipo,
       this.post.usuario = data.usuario;
       this.post.photo = data.photo;
       this.post.titulo = data.titulo;
