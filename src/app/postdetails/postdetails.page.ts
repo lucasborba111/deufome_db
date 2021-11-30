@@ -22,6 +22,7 @@ export class PostdetailsPage implements OnInit {
     ingredientes: '',
     modopreparo: '',
     rating: 0,
+    usernumb: 0,
   }
 
   @Input() numStars: number = 5;
@@ -48,6 +49,7 @@ export class PostdetailsPage implements OnInit {
       this.post.ingredientes = data.ingredientes;
       this.post.modopreparo = data.modopreparo;
       this.post.rating = data.rating;
+      this.post.usernumb = data.usernumb;
      }
 
      deletePost(post){
@@ -86,10 +88,15 @@ export class PostdetailsPage implements OnInit {
     this.ionClick.emit(this.value)
     
     this.calc();
+    //setar o valor de estrelas e usuario
     this.post.rating = this.value;
     let postRef = firebase.database().ref('posts/' + this.post.id);
-    postRef.child('rating').set(this.post.rating);
-    
+    //postRef.child('rating').set(this.post.rating);
+    //postRef.child('usernumber').set(this.post.usernumb+1);
+
+    postRef.child('rating').update({'': this.post.rating});
+    postRef.child('usernumb').update({'': this.post.usernumb+1})
+   //
   }
   log(valor){
     console.log(valor);

@@ -21,6 +21,8 @@
     <p><i class="icon ion-md-restaurant"></i>{{ post.modopreparo }}</p>
   </div>
   <p style="text-align: center;">Avaliar receita!</p>
+  <p style="text-align: center;">{{post.rating}}</p>
+  <p style="text-align: center;">{{post.usernumb}}</p>
 
   <ion-grid class="ion-grid-container">
       <div class="rating-position" *ngFor="let star of stars; let i = index;" tappable (click)="starClicked(i)">

@@ -85,6 +85,8 @@ async openGalery(){
     ingredientes: '',
     modopreparo: '',
     usuario: '',
+    usernumb: 0,
+    rating: 0,
   }
 
   posts = []
