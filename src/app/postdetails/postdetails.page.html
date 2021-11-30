@@ -20,7 +20,12 @@
     <img src="../assets/iconepreparo.png" class="imgpreparo">
     <p><i class="icon ion-md-restaurant"></i>{{ post.modopreparo }}</p>
   </div>
+  <p style="text-align: center;">Avaliar receita!</p>
 
-
+  <ion-grid class="ion-grid-container">
+      <div class="rating-position" *ngFor="let star of stars; let i = index;" tappable (click)="starClicked(i)">
+          <ion-icon [name]="star"></ion-icon>
+      </div>
+  </ion-grid>
 
 </ion-content>

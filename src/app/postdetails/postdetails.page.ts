@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-
 import firebase from 'firebase/app';
 @Component({
   selector: 'app-postdetails',
@@ -17,6 +16,11 @@ export class PostdetailsPage implements OnInit {
     ingredientes: '',
     modopreparo: '',
   }
+
+  @Input() numStars: number = 5;
+  @Input() value: number = 4;
+  @Output() ionClick: EventEmitter<number> = new EventEmitter<number>();
+  stars: string[] = [];
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -42,5 +46,35 @@ export class PostdetailsPage implements OnInit {
     }
   ngOnInit() {
   }
+  ngAfterViewInit(){
+    this.calc();
+  }
+  calc(){
+    this.stars = [ 
+    ];
+    let tmp = this.value;
+    for(let i=0; i< this.numStars; i++, tmp--){
+      if(tmp>=1){
+        this.stars.push("star");
+        
+      }
+      else if(tmp>0 && tmp < 1){
+          this.stars.push("star-half");
+      }
+      else{
+        this.stars.push("star-outline");
+      }
 
+    }
+  }
+  starClicked(index){
+    this.value = index + 1;
+    console.log(this.value);
+
+    this.ionClick.emit(this.value+1)
+    this.calc();
+  }
+  log(valor){
+    console.log(valor);
+  }
 }

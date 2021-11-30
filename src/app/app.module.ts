@@ -21,7 +21,6 @@ import { AuthGuard } from './guards/auth.guard';
 import { WebView } from '@ionic-native/ionic-webview/ngx';
 import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 
-
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],

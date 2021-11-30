@@ -67,9 +67,20 @@ i{
   padding-right: 10px;
   margin-left: 5px;
 }
-
-
-
+.ion-grid-container ion-icon{
+  font-size: 'larger';
+  color: yellow;
+}
+.ion-grid-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: rgb(233, 52, 52);
+}
+.rating-position{
+  display: flex;
+  
+}
 
 
 
