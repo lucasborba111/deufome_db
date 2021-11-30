@@ -1,19 +1,19 @@
+"use strict";
 (self["webpackChunkapp"] = self["webpackChunkapp"] || []).push([["common"],{
 
-/***/ 8225:
+/***/ 631:
 /*!*********************************************************************!*\
   !*** ./node_modules/@ionic/core/dist/esm/button-active-d4bd4f74.js ***!
   \*********************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "c": () => (/* binding */ createButtonActiveGesture)
 /* harmony export */ });
-/* harmony import */ var _index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index-7a8b7a1c.js */ 3150);
-/* harmony import */ var _haptic_27b3f981_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./haptic-27b3f981.js */ 2954);
-/* harmony import */ var _index_34cb2743_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./index-34cb2743.js */ 9461);
+/* harmony import */ var _index_7a8b7a1c_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index-7a8b7a1c.js */ 6842);
+/* harmony import */ var _haptic_27b3f981_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./haptic-27b3f981.js */ 9502);
+/* harmony import */ var _index_34cb2743_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./index-34cb2743.js */ 8910);
 
 
 
@@ -82,64 +82,75 @@ const createButtonActiveGesture = (el, isButton) => {
 
 /***/ }),
 
-/***/ 7330:
+/***/ 5709:
 /*!**************************************************************************!*\
   !*** ./node_modules/@ionic/core/dist/esm/framework-delegate-4392cd63.js ***!
   \**************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "a": () => (/* binding */ attachComponent),
 /* harmony export */   "d": () => (/* binding */ detachComponent)
 /* harmony export */ });
-/* harmony import */ var _helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./helpers-dd7e4b7b.js */ 2377);
+/* harmony import */ var C_Users_Administrator_Desktop_deufome_db_node_modules_angular_devkit_build_angular_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@angular-devkit/build-angular/node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ 151);
+/* harmony import */ var _helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./helpers-dd7e4b7b.js */ 693);
 
 
-const attachComponent = async (delegate, container, component, cssClasses, componentProps) => {
-  if (delegate) {
-    return delegate.attachViewToDom(container, component, componentProps, cssClasses);
-  }
-  if (typeof component !== 'string' && !(component instanceof HTMLElement)) {
-    throw new Error('framework delegate is missing');
-  }
-  const el = (typeof component === 'string')
-    ? container.ownerDocument && container.ownerDocument.createElement(component)
-    : component;
-  if (cssClasses) {
-    cssClasses.forEach(c => el.classList.add(c));
-  }
-  if (componentProps) {
-    Object.assign(el, componentProps);
-  }
-  container.appendChild(el);
-  await new Promise(resolve => (0,_helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_0__.c)(el, resolve));
-  return el;
-};
+
+const attachComponent = /*#__PURE__*/function () {
+  var _ref = (0,C_Users_Administrator_Desktop_deufome_db_node_modules_angular_devkit_build_angular_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__.default)(function* (delegate, container, component, cssClasses, componentProps) {
+    if (delegate) {
+      return delegate.attachViewToDom(container, component, componentProps, cssClasses);
+    }
+
+    if (typeof component !== 'string' && !(component instanceof HTMLElement)) {
+      throw new Error('framework delegate is missing');
+    }
+
+    const el = typeof component === 'string' ? container.ownerDocument && container.ownerDocument.createElement(component) : component;
+
+    if (cssClasses) {
+      cssClasses.forEach(c => el.classList.add(c));
+    }
+
+    if (componentProps) {
+      Object.assign(el, componentProps);
+    }
+
+    container.appendChild(el);
+    yield new Promise(resolve => (0,_helpers_dd7e4b7b_js__WEBPACK_IMPORTED_MODULE_1__.c)(el, resolve));
+    return el;
+  });
+
+  return function attachComponent(_x, _x2, _x3, _x4, _x5) {
+    return _ref.apply(this, arguments);
+  };
+}();
+
 const detachComponent = (delegate, element) => {
   if (element) {
     if (delegate) {
       const container = element.parentElement;
       return delegate.removeViewFromDom(container, element);
     }
+
     element.remove();
   }
+
   return Promise.resolve();
 };
 
 
 
-
 /***/ }),
 
-/***/ 2954:
+/***/ 9502:
 /*!**************************************************************!*\
   !*** ./node_modules/@ionic/core/dist/esm/haptic-27b3f981.js ***!
   \**************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "a": () => (/* binding */ hapticSelectionStart),
@@ -258,13 +269,12 @@ const hapticImpact = (options) => {
 
 /***/ }),
 
-/***/ 408:
+/***/ 5907:
 /*!***********************************************************************!*\
   !*** ./node_modules/@ionic/core/dist/esm/spinner-configs-cd7845af.js ***!
   \***********************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "S": () => (/* binding */ SPINNERS)
@@ -383,13 +393,12 @@ const SPINNERS = spinners;
 
 /***/ }),
 
-/***/ 1269:
+/***/ 3784:
 /*!*************************************************************!*\
   !*** ./node_modules/@ionic/core/dist/esm/theme-ff3fc52f.js ***!
   \*************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "c": () => (/* binding */ createColorClasses),
@@ -397,44 +406,62 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "h": () => (/* binding */ hostContext),
 /* harmony export */   "o": () => (/* binding */ openURL)
 /* harmony export */ });
+/* harmony import */ var C_Users_Administrator_Desktop_deufome_db_node_modules_angular_devkit_build_angular_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@angular-devkit/build-angular/node_modules/@babel/runtime/helpers/esm/asyncToGenerator */ 151);
+
+
 const hostContext = (selector, el) => {
   return el.closest(selector) !== null;
 };
 /**
  * Create the mode and color classes for the component based on the classes passed in
  */
+
+
 const createColorClasses = (color, cssClassMap) => {
-  return (typeof color === 'string' && color.length > 0) ? Object.assign({ 'ion-color': true, [`ion-color-${color}`]: true }, cssClassMap) : cssClassMap;
+  return typeof color === 'string' && color.length > 0 ? Object.assign({
+    'ion-color': true,
+    [`ion-color-${color}`]: true
+  }, cssClassMap) : cssClassMap;
 };
-const getClassList = (classes) => {
+
+const getClassList = classes => {
   if (classes !== undefined) {
     const array = Array.isArray(classes) ? classes : classes.split(' ');
-    return array
-      .filter(c => c != null)
-      .map(c => c.trim())
-      .filter(c => c !== '');
+    return array.filter(c => c != null).map(c => c.trim()).filter(c => c !== '');
   }
+
   return [];
 };
-const getClassMap = (classes) => {
+
+const getClassMap = classes => {
   const map = {};
   getClassList(classes).forEach(c => map[c] = true);
   return map;
 };
-const SCHEME = /^[a-z][a-z0-9+\-.]*:/;
-const openURL = async (url, ev, direction, animation) => {
-  if (url != null && url[0] !== '#' && !SCHEME.test(url)) {
-    const router = document.querySelector('ion-router');
-    if (router) {
-      if (ev != null) {
-        ev.preventDefault();
-      }
-      return router.push(url, direction, animation);
-    }
-  }
-  return false;
-};
 
+const SCHEME = /^[a-z][a-z0-9+\-.]*:/;
+
+const openURL = /*#__PURE__*/function () {
+  var _ref = (0,C_Users_Administrator_Desktop_deufome_db_node_modules_angular_devkit_build_angular_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__.default)(function* (url, ev, direction, animation) {
+    if (url != null && url[0] !== '#' && !SCHEME.test(url)) {
+      const router = document.querySelector('ion-router');
+
+      if (router) {
+        if (ev != null) {
+          ev.preventDefault();
+        }
+
+        return router.push(url, direction, animation);
+      }
+    }
+
+    return false;
+  });
+
+  return function openURL(_x, _x2, _x3, _x4) {
+    return _ref.apply(this, arguments);
+  };
+}();
 
 
 
