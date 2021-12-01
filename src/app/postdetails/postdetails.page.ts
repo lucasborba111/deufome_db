@@ -21,14 +21,19 @@ export class PostdetailsPage implements OnInit {
     titulo: '',
     ingredientes: '',
     modopreparo: '',
-    rating: 0,
-    usernumb: 0,
+    nota: 0,
+    estrela1: 0,
+    estrela2: 0,
+    estrela3: 0,
+    estrela4: 0,
+    estrela5: 0,
   }
-
+    
   @Input() numStars: number = 5;
   @Input() value: number = 1;
 
   @Output() ionClick: EventEmitter<number> = new EventEmitter<number>();
+
   stars: string[] = [];
 
   constructor(
@@ -48,8 +53,12 @@ export class PostdetailsPage implements OnInit {
       this.post.titulo = data.titulo;
       this.post.ingredientes = data.ingredientes;
       this.post.modopreparo = data.modopreparo;
-      this.post.rating = data.rating;
-      this.post.usernumb = data.usernumb;
+      this.post.estrela1 = data.estrela1;
+      this.post.estrela2 = data.estrela2;
+      this.post.estrela3 = data.estrela3;
+      this.post.estrela4 = data.estrela4;
+      this.post.estrela5 = data.estrela5;
+      this.post.nota = data.nota;
      }
 
      deletePost(post){
@@ -81,24 +90,60 @@ export class PostdetailsPage implements OnInit {
       }
 
     }
-  }
-  starClicked(index){
-    this.value = index + 1;
-    console.log(this.value);
-    this.ionClick.emit(this.value)
-    
-    this.calc();
-    //setar o valor de estrelas e usuario
-    this.post.rating = this.value;
-    let postRef = firebase.database().ref('posts/' + this.post.id);
-    //postRef.child('rating').set(this.post.rating);
-    //postRef.child('usernumber').set(this.post.usernumb+1);
 
-    postRef.child('rating').update({'': this.post.rating});
-    postRef.child('usernumb').update({'': this.post.usernumb+1})
-   //
+    let estrela = this.value;
+
+    let postRef = firebase.database().ref('posts/' + this.post.id);
+
+    if(estrela==1){
+      postRef.child('estrela1').set(this.post.estrela1++);
+      this.value=0;
+    }
+     if (estrela==2){
+      postRef.child('estrela2').set(this.post.estrela2++);
+      this.value=0;
+
+    }
+    if (estrela==3){
+      postRef.child('estrela3').set(this.post.estrela3++);
+      this.value=0;
+
+
+    }
+
+     if(estrela==4){
+      postRef.child('estrela4').set(this.post.estrela4++);
+      this.value=0;
+
+    }
+
+    if(estrela==5) { 
+      postRef.child('estrela5').set(this.post.estrela5++);
+      this.value=0;
+
+    }
+
+ console.log(this.value)
+    let porcentagem = (5 * this.post.estrela5 + 4 * this.post.estrela4 
+                      + 3 * this.post.estrela3 + 2 * this.post.estrela2 + this.post.estrela1 * 1) / (this.post.estrela5 + this.post.estrela4 + this.post.estrela3 + this.post.estrela2 + this.post.estrela1)
+
+    postRef.child('nota').set(porcentagem.toFixed(2));
+    
+
+
+
+
   }
-  log(valor){
-    console.log(valor);
-  }
+  starClicked(index, post){
+    this.value = index + 1;
+    this.ionClick.emit(this.value)
+    this.calc();
+    //setar o valor de estrelas e usuari
+   
+
+
 }
+log(valor){
+  console.log(valor);
+}
+  }
