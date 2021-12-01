@@ -1,7 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import firebase from 'firebase/app';
-import { AngularFireAuth } from '@angular/fire/auth';
 import { AuthService } from '../services/auth.service';
 
 
@@ -31,7 +30,7 @@ export class PostdetailsPage implements OnInit {
     
   @Input() numStars: number = 5;
   @Input() value: number = 1;
-
+  @Input() teste: number = 0;
   @Output() ionClick: EventEmitter<number> = new EventEmitter<number>();
 
   stars: string[] = [];
@@ -126,24 +125,21 @@ export class PostdetailsPage implements OnInit {
  console.log(this.value)
     let porcentagem = (5 * this.post.estrela5 + 4 * this.post.estrela4 
                       + 3 * this.post.estrela3 + 2 * this.post.estrela2 + this.post.estrela1 * 1) / (this.post.estrela5 + this.post.estrela4 + this.post.estrela3 + this.post.estrela2 + this.post.estrela1)
-
+    this.teste = parseFloat(porcentagem.toFixed(2));
     postRef.child('nota').set(porcentagem.toFixed(2));
-    
-
-
-
 
   }
-  starClicked(index, post){
+  starClicked(index){
     this.value = index + 1;
     this.ionClick.emit(this.value)
+
     this.calc();
     //setar o valor de estrelas e usuari
    
 
 
 }
-log(valor){
-  console.log(valor);
+log(value){
+  console.log(value);
 }
   }

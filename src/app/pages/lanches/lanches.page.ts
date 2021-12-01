@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { Storage } from '@ionic/storage';
+import { notEqual } from 'assert';
 import firebase from 'firebase/app';
 
 
@@ -11,6 +12,10 @@ import firebase from 'firebase/app';
 })
 export class LanchesPage implements OnInit {
   posts = []
+  @Input() numStars: number = 5;
+  @Input() nota: number = 1;
+  @Output() ionClick: EventEmitter<number> = new EventEmitter<number>();
+  stars: string[] = [];
   constructor(
     private navCtrl: NavController,
     private storage: Storage
@@ -25,6 +30,7 @@ export class LanchesPage implements OnInit {
 
   ionViewWillEnter(){
     this.fetchPosts();
+    
   }
   
   fetchPosts(){
@@ -48,22 +54,44 @@ export class LanchesPage implements OnInit {
           estrela3: element.estrela3,
           estrela4: element.estrela4,
           estrela5:  element.estrela5,
-          nota: element.nota,
-        }
-        if(post.tipo=='lanches'){
-          this.posts.push(post); 
-        }
-      }
-      console.log('this.posts = ', this.posts);
-    })
+          nota: element.nota
 
+        } 
+     
+       
+        if(post.tipo=='lanches'){
+          console.log('this.posts = ', this.posts);
+          this.posts.push(post); 
+
+            }
+        }
+        
+    })
   }
-  
   postDetails(post){
+    
     this.navCtrl.navigateForward(['postdetails', {data: JSON.stringify(post)}])
   }
+
+  //init(nota){
+   // this.stars = [ 
+   // ];
+  //  let tmp = nota;
+   // for(let i=0; i< this.numStars; i++, tmp--){
+     // if(tmp>=1){
+    //    this.stars.push("star");
+    //  }
+     // else if(tmp>0 && tmp < 1){
+      //    this.stars.push("star-half");
+    //  }
+     // else{
+     //   this.stars.push("star-outline");
+    //  }
+  //}  
+//}
   
   async ngOnInit() {
+     
     await this.storage.create();
   }
 
