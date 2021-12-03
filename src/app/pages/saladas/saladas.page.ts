@@ -14,17 +14,6 @@ export class SaladasPage implements OnInit {
     private navCtrl: NavController,
     private storage: Storage
     ) { }
-  
-  
-  
-  
-  deletePost(post){
-    console.log('post = ',post);
-    firebase.database().ref('posts/' + post.id).remove().then(res=>{
-      console.log('removed =', res);
-    })
-  }
-
 
 
 ionViewWillEnter(){
@@ -76,25 +65,4 @@ addArticle(){
 async ngOnInit() {
   await this.storage.create();
 }
-
-  hidden = false;
-  toggleHidden(){
-    this.hidden = !this.hidden;
-  }
-
-  hidden2 = false;
-  toggleHidden2(){
-    this.hidden2 = !this.hidden2;
-  }
-
-  hidden3 = false;
-  toggleHidden3(){
-    this.hidden3 = !this.hidden3;
-  }
-
-  hidden4 = false;
-  toggleHidden4(){
-    this.hidden4 = !this.hidden4;
-  }
-
 }

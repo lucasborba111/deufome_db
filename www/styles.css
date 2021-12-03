@@ -1251,5 +1251,12 @@ sub {
 .ion-align-items-baseline {
   align-items: baseline !important;
 }
+.teste {
+  --background: rgb(255, 255, 255);
+  --spinner-color: #ad0002;
+}
+.teste.sc-ion-alert-md {
+  border-radius: 20px;
+}
 
 /*# sourceMappingURL=styles.css.map*/

@@ -1,7 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { NavController } from '@ionic/angular';
-import { Storage } from '@ionic/storage';
-import { notEqual } from 'assert';
+import { Storage } from '@ionic/storage';  
 import firebase from 'firebase/app';
 
 
@@ -18,15 +17,9 @@ export class LanchesPage implements OnInit {
   stars: string[] = [];
   constructor(
     private navCtrl: NavController,
-    private storage: Storage
-  ) { }
- 
-    deletePost(post){
-      console.log('post = ',post);
-      firebase.database().ref('posts/' + post.id).remove().then(res=>{
-        console.log('removed =', res);
-      })
-    }
+    private storage: Storage,
+  ){}
+
 
   ionViewWillEnter(){
     this.fetchPosts();
@@ -95,25 +88,5 @@ export class LanchesPage implements OnInit {
     await this.storage.create();
   }
 
-  hidden = false;
-  toggleHidden(){
-    this.hidden = !this.hidden;
-  }
-
-  hidden2 = false;
-  toggleHidden2(){
-    this.hidden2 = !this.hidden2;
-  }
-
-  hidden3 = false;
-  toggleHidden3(){
-    this.hidden3 = !this.hidden3;
-  }
-
-  hidden4 = false;
-  toggleHidden4(){
-    this.hidden4 = !this.hidden4;
-  }
-
-
+  
 }

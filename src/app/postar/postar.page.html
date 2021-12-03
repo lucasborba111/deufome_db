@@ -29,7 +29,7 @@
       </div>
       {{downloadUrl | async}}
     <div *ngIf="post.photo != '' ">
-      <img src="{{ post.photo }}" />
+      <img class="img" src="{{ post.photo }}" />
     </div>
   </div>
   <ion-button class="botaopostar" color="body" (click)="submitPost()" expand="full">Publicar</ion-button>

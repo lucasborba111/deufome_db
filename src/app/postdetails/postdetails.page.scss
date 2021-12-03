@@ -73,12 +73,26 @@ i{
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background-color: rgb(233, 52, 52);
+  background-color: #ad0002;
 }
 .rating-position{
   display: flex;
-  
 }
+
+.nota{
+  color: rgb(87, 87, 87);
+  font-family: BebasNeue-Regular;
+  position: relative;
+  margin-left: 10px;
+  margin-top: 8px;
+}
+
+.avaliar{
+  font-family: BebasNeue-Regular;
+  font-size: 17px;
+  color: rgb(87, 87, 87);
+}
+
 
 
 

@@ -57,7 +57,7 @@ export class RegisterPage implements OnInit {
         })
         .then(()=>{
           loading.dismiss();
-          this.toast('Registro Completo! Por favor verifique seu email', 'sucess');
+          this.toast('Registro Completo! Por favor verifique seu email', 'success');
           this.router.navigate(['/login']);
         })
         .catch(error =>{
@@ -65,10 +65,14 @@ export class RegisterPage implements OnInit {
           this.toast(error.message, 'danger');
         })
       })
-        .catch(error =>{
-          loading.dismiss();
-          this.toast('Email já cadastrado!', 'danger');
-        })
+      if (this.email.search('@')==-1){
+        loading.dismiss();
+        this.toast('Email Invalido, Insira um Email válido!', 'warning');
+      }
+     else if (this.password.length < 6){
+       loading.dismiss();
+    this.toast('Insira uma senha de pelo menos 6 digitos', 'warning');
+  }
 
     }else{
       this.toast('Por favor preencha todas as informações', 'warning');

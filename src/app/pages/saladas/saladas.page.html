@@ -9,7 +9,7 @@
   </ion-header>
   <ion-content>
 	<div id="todos">
-	<div *ngFor="let post of posts">
+	<div class="teste" *ngFor="let post of posts">
 		<ion-card class="cards" *ngIf="(post.tipo == 'saladas')" (click)="postDetails(post)">
 		  <ion-card-header>
 			  <img src="{{post.photo}}"  class="img"/>
@@ -19,139 +19,6 @@
 		  </ion-card-header>
 		</ion-card>
 	</div>
-	<ion-card id="cards" (click)="toggleHidden()">
-	  <ion-card-header>
-		<img src="assets/salada1.jpg" class="img" />
-		<ion-card-title class="tituloreceitas">SALADA DE MACARRÃO COM ATUM</ion-card-title>
-		<ion-card-subtitle class="fonteusuario">Por: *USUARIO*</ion-card-subtitle>
-		<br />
-	  </ion-card-header>
-	  <ion-card-content class="fonteingredientes" *ngIf="hidden">
-		<img class="iconeingredientes" src="assets/iconeingredientes.png" />
-		<br />
-		<br />
-		<p><i class="icon ion-md-restaurant"> 250 g de macarrão parafuso</i></p>
-		<p><i class="icon ion-md-restaurant"> 1/2 cebola bem picadinha</i></p>
-		<p><i class="icon ion-md-restaurant"> 2 tomates sem sementes cortados em cubinhos</i></p>
-		<p><i class="icon ion-md-restaurant"> 1 lata de milho verde</i></p>
-		<p><i class="icon ion-md-restaurant"> 2 latas de atum ralado sem o óleo da conserva</i></p>
-		<p><i class="icon ion-md-restaurant"> 2 colheres (sopa) de mostarda</i></p>
-		<p><i class="icon ion-md-restaurant"> 1 xícara de maionese</i></p>
-		<p><i class="icon ion-md-restaurant"> sal, pimenta-do-reino e cheiro verde a gosto</i></p>
-		<br />
-		<img class="iconepreparo" src="assets/iconepreparo.png" />
-		<br />
-		<br />
-		<p><i class="icon ion-md-restaurant"> Em uma panela ferva a água para cozinhar o macarrão.</i></p>
-		<p><i class="icon ion-md-restaurant"> Cozinhe da forma tradicional deixando o macarrão al dente.</i></p>
-		<p><i class="icon ion-md-restaurant"> Enquanto isso prepare a mistura para temperar o macarrão.</i></p>
-		<p><i class="icon ion-md-restaurant"> Coloque em uma vasilha grande as 2 latas de atum, a cebola, os tomates, o milho, a maionese, a mostarda, sal, pimenta do reino e o cheiro verde.</i></p>
-		<p><i class="icon ion-md-restaurant"> Cuidadosamente misture bem.</i></p>
-		<p><i class="icon ion-md-restaurant"> Depois que o macarrão estiver cozido, colque em um refratário e adicione a mistura mexendo levemente para não quebrar o macarrão.</i></p>
-		<p><i class="icon ion-md-restaurant"> Quando a mistura estiver bem incorporada ao macarrão leve para a geladeira por no mínimo 1 hora e meia.</i></p>
-		<p><i class="icon ion-md-restaurant"> Eu prefiro fazer com de um dia para o outro,pois o sabor fica bem mais apurado.</i></p>
-		<p><i class="icon ion-md-restaurant"> Sirva como prato principal em dias quentes acompanhado de um frango grelhado..</i></p>
-	  </ion-card-content>
-	</ion-card>
-	<ion-card id="cards" (click)="toggleHidden2()">
-	  <ion-card-header>
-		<img src="assets/salada2.jpg" class="img" />
-		<ion-card-title class="tituloreceitas">COUVE-FLOR GRATINADA</ion-card-title>
-		<ion-card-subtitle class="fonteusuario">Por: *USUARIO*</ion-card-subtitle>
-		<br />
-	  </ion-card-header>
-	  <ion-card-content class="fonteingredientes" *ngIf="hidden2">
-		<img class="iconeingredientes" src="assets/iconeingredientes.png" />
-		<br />
-		<br />
-		<p><i class="icon ion-md-restaurant"> 1 couve-flor média</i></p>
-		<p><i class="icon ion-md-restaurant"> 1 copo de requeijão</i></p>
-		<p><i class="icon ion-md-restaurant"> 2 ovos</i></p>
-		<p><i class="icon ion-md-restaurant"> 50 g de queijo ralado</i></p>
-		<p><i class="icon ion-md-restaurant"> 200 g de mussarela</i></p>
-		<p><i class="icon ion-md-restaurant"> cheiro-verde</i></p>
-		<p><i class="icon ion-md-restaurant"> 1 tomate picadinho</i></p>
-		<p><i class="icon ion-md-restaurant"> margarina para juntar</i></p>
-		<br />
-		<img class="iconepreparo" src="assets/iconepreparo.png" />
-		<br />
-		<br />
-		<p><i class="icon ion-md-restaurant"> Cozinhar a couve-flor com sal até ficar bem macia.</i></p>
-		<p><i class="icon ion-md-restaurant"> Escorra e coloque em forma untada com margarina.</i></p>
-		<p><i class="icon ion-md-restaurant"> Acrescente o requeijão (colheradas espalhadas)</i></p>
-		<p><i class="icon ion-md-restaurant"> Bata os ovos e junte 25 g de queijo ralado, cheiro verde e o tomate.</i></p>
-		<p><i class="icon ion-md-restaurant"> Jogue os ovos batidos por cima da couve-flor.</i></p>
-		<p><i class="icon ion-md-restaurant"> Cubra com a mussarela, polvilhe com o restante do queijo ralado.</i></p>
-		<p><i class="icon ion-md-restaurant"> Leve ao forno para gratinar.</i></p>
-	  </ion-card-content>
-	</ion-card>
-	<ion-card id="cards" (click)="toggleHidden3()">
-	  <ion-card-header>
-		<img src="assets/salada3.jpg" class="img" />
-		<ion-card-title class="tituloreceitas">SALPICÃO</ion-card-title>
-		<ion-card-subtitle class="fonteusuario">Por: *USUARIO*</ion-card-subtitle>
-		<br />
-	  </ion-card-header>
-	  <ion-card-content class="fonteingredientes" *ngIf="hidden3">
-		<img class="iconeingredientes" src="assets/iconeingredientes.png" />
-		<br />
-		<br />
-		<p><i class="icon ion-md-restaurant"> 1/2 kg de frango (peito) refogado e desfiado</i></p>
-		<p><i class="icon ion-md-restaurant"> 1 cenoura média ralada</i></p>
-		<p><i class="icon ion-md-restaurant"> 1 lata de milho escorrido</i></p>
-		<p><i class="icon ion-md-restaurant"> 1 vidro de azeitona pequena</i></p>
-		<p><i class="icon ion-md-restaurant"> Palmito picado a gosto</i></p>
-		<p><i class="icon ion-md-restaurant"> 2 maçãs cascada e picada</i></p>
-		<p><i class="icon ion-md-restaurant"> 200 g de uvas passas</i></p>
-		<p><i class="icon ion-md-restaurant"> 100 g de presunto picado</i></p>
-		<p><i class="icon ion-md-restaurant"> 100 g de mussarela picada</i></p>
-		<p><i class="icon ion-md-restaurant"> Tempero a gosto e por último</i></p>
-		<p><i class="icon ion-md-restaurant"> 1 lata de creme de leite</i></p>
-		<p><i class="icon ion-md-restaurant"> 1 colher (sopa) de maionese</i></p>
-		<br />
-		<img class="iconepreparo" src="assets/iconepreparo.png" />
-		<br />
-		<br />
-		<p><i class="icon ion-md-restaurant"> Misture todos os ingredientes.</i></p>
-		<p><i class="icon ion-md-restaurant"> Jogar por cima batata palha a gosto.</i></p>
-	  </ion-card-content>
-	</ion-card>
-	<ion-card id="cards" (click)="toggleHidden4()">
-	  <ion-card-header>
-		<img src="assets/salada4.jpg" class="img" />
-		<ion-card-title class="tituloreceitas">SALADA DE BERINJELA NO FORNO</ion-card-title>
-		<ion-card-subtitle class="fonteusuario">Por: *USUARIO*</ion-card-subtitle>
-		<br />
-	  </ion-card-header>
-	  <ion-card-content class="fonteingredientes" *ngIf="hidden4">
-		<img class="iconeingredientes" src="assets/iconeingredientes.png" />
-		<br />
-		<br />
-		<p><i class="icon ion-md-restaurant"> 3 berinjelas</i></p>
-		<p><i class="icon ion-md-restaurant"> 1 pimentão verde</i></p>
-		<p><i class="icon ion-md-restaurant"> 1 pimentão vermelho</i></p>
-		<p><i class="icon ion-md-restaurant"> 1 pimentão amarelo</i></p>
-		<p><i class="icon ion-md-restaurant"> 1 cebola grande</i></p>
-		<p><i class="icon ion-md-restaurant"> 1/2 xícara (chá) de azeite</i></p>
-		<p><i class="icon ion-md-restaurant"> 1/4 xícara (chá) de vinagre</i></p>
-		<p><i class="icon ion-md-restaurant"> 3 colheres (sopa) de azeitonas pretas picadas</i></p>
-		<p><i class="icon ion-md-restaurant"> 2 dentes (grandes) de alho picadinho</i></p>
-		<p><i class="icon ion-md-restaurant"> 1 folha de louro</i></p>
-		<p><i class="icon ion-md-restaurant"> 2 colheres (sopa) de orégano</i></p>
-		<p><i class="icon ion-md-restaurant"> 2 colheres (sopa) de salsa picadinha</i></p>
-		<p><i class="icon ion-md-restaurant"> sal a gosto</i></p>
-		<br />
-		<img class="iconepreparo" src="assets/iconepreparo.png" />
-		<br />
-		<br />
-		<p><i class="icon ion-md-restaurant"> Retire um pouco da casca da berinjela, corte em fatias finas no sentido do comprimento e depois corte em tirinhas.</i></p>
-		<p><i class="icon ion-md-restaurant"> Coloque as berinjelas cortadas de molho em água com sal durante meia hora, depois passe na água para retirar o sal e dê uma espremida.</i></p>
-		<p><i class="icon ion-md-restaurant"> Corte a cebola e o pimentão em tirinhas, coloque em uma assadeira, junte a berinjela, o alho, o louro, a salsa, orégano, azeitona e o sal.</i></p>
-		<p><i class="icon ion-md-restaurant"> Regue com metade do vinagre e leve ao forno médio preaquecido por 45 minutos.</i></p>
-		<p><i class="icon ion-md-restaurant"> Retire do forno e regue com o azeite e o restante do vinagre.</i></p>
-		<p><i class="icon ion-md-restaurant"> Deixe esfriar e sirva.</i></p>
-	  </ion-card-content>
-	</ion-card>
 	</div>
   </ion-content>
   

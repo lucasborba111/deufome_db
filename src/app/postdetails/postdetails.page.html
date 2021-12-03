@@ -5,7 +5,7 @@
       <ion-back-button defaultHref="{{post.tipo}}"></ion-back-button>
       <ion-title>{{post.titulo}}</ion-title>
       </ion-buttons>
-      <ion-icon name="trash-outline"(click)="deletePost(post)"></ion-icon>
+      <ion-icon name="trash-outline"(click)="deletePost()"></ion-icon>
   </ion-toolbar>
  
   
@@ -14,14 +14,14 @@
   <div class="conteudo">
     <img src="{{ post.photo }}" class="img">
     <span class="titulo">{{ post.titulo }}</span>
-    <span class="nota">Avaliação: {{teste}}</span>
     <span class="usuario">Por: {{post.usuario}}</span>
+    <span class="nota"> Avaliação: {{teste}}</span>
     <img src="../assets/iconeingredientes.png" class="imgingredientes">
     <p><i class="icon ion-md-restaurant"></i>{{ post.ingredientes }}</p>
     <img src="../assets/iconepreparo.png" class="imgpreparo">
     <p><i class="icon ion-md-restaurant"></i>{{ post.modopreparo }}</p>
   </div>
-  <p style="text-align: center;">Avaliar receita!</p>
+  <p class="avaliar" style="text-align: center;">Avaliar receita!</p>
   <p style="text-align: center;">{{post.rating}}</p>
   <p style="text-align: center;">{{post.usernumb}}</p>
   <ion-grid class="ion-grid-container">

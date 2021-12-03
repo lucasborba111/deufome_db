@@ -2,6 +2,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import firebase from 'firebase/app';
 import { AuthService } from '../services/auth.service';
+import { ToastController } from '@ionic/angular';
 
 
 @Component({
@@ -38,8 +39,9 @@ export class PostdetailsPage implements OnInit {
   constructor(
     private activatedRoute: ActivatedRoute,
     private auth: AuthService,
-
-    ) {
+    private toastr: ToastController
+    ) 
+    {
 
       let data = this.activatedRoute.snapshot.params['data'];
       console.log('reached = ', JSON.parse(data));
@@ -60,12 +62,26 @@ export class PostdetailsPage implements OnInit {
       this.post.nota = data.nota;
      }
 
-     deletePost(post){
-      console.log('post = ',post);
-      firebase.database().ref('posts/' + post.id).remove().then(res=>{
-        console.log('removed =', res);
-      })
+
+     deletePost(){
+      this.toast('Solicitação de remoção enviada!, Excluiremos em breve', 'warning');
     }
+
+
+    async toast(message,status){
+      const toast = await this.toastr.create({
+        message: message,
+        color: status,
+        position: 'top',
+        duration: 2000
+      });
+      toast.present();
+    } 
+
+
+
+
+
   ngOnInit() {
    
   }

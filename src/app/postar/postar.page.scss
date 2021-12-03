@@ -9,6 +9,17 @@
   flex-direction: row;
 }
 
+.img{
+  width: 60%;
+  border-radius: 7px;
+  display: flex;
+  height: 90px;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  border: 3px solid #e4e4e4;
+}
+
 .imgDiv{
   width: 35%;
   border-radius: 7px;
