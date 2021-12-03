@@ -328,39 +328,49 @@ let PostarPage = class PostarPage {
         return text;
     }
     submitPost() {
-        console.log('running');
-        this.auth.user$.subscribe(user => {
-            this.post.usuario = JSON.stringify(user.userName);
-            if (this.post.photo == '') {
-                this.loading.presentToast('Por favor adicione uma imagem');
-            }
-            else {
-                if (this.post.titulo == '') {
-                    this.loading.presentToast('Por favor adicione um titulo');
+        return (0,tslib__WEBPACK_IMPORTED_MODULE_9__.__awaiter)(this, void 0, void 0, function* () {
+            console.log('running');
+            this.auth.user$.subscribe(user => {
+                this.post.usuario = JSON.stringify(user.userName);
+                if (this.post.photo == '') {
+                    this.loading.presentToast('Por favor adicione uma imagem');
                 }
                 else {
-                    if (this.post.ingredientes == '') {
-                        this.loading.presentToast('Por favor adicione os ingredientes');
+                    if (this.post.titulo == '') {
+                        this.loading.presentToast('Por favor adicione um titulo');
                     }
                     else {
-                        if (this.post.modopreparo == '') {
-                            this.loading.presentToast('Por favor adicione o modo de preparo');
+                        if (this.post.ingredientes == '') {
+                            this.loading.presentToast('Por favor adicione os ingredientes');
                         }
                         else {
-                            if (this.post.tipo == '') {
-                                this.loading.presentToast('Por favor selecione a categoria');
+                            if (this.post.modopreparo == '') {
+                                this.loading.presentToast('Por favor adicione o modo de preparo');
                             }
                             else {
-                                //inserindo no firebase
-                                firebase_app__WEBPACK_IMPORTED_MODULE_3__.default.database().ref('posts').push(this.post).then(res => {
-                                    console.log('pushed', res);
-                                    this.navCtrl.navigateRoot('home');
-                                });
+                                if (this.post.tipo == '') {
+                                    this.loading.presentToast('Por favor selecione a categoria');
+                                }
+                                else {
+                                    // inserindo no firebase
+                                    firebase_app__WEBPACK_IMPORTED_MODULE_3__.default.database().ref('posts').push(this.post).then(res => {
+                                        console.log('pushed', res);
+                                        this.navCtrl.navigateRoot('home');
+                                    });
+                                }
                             }
                         }
                     }
                 }
-            }
+            });
+            const loading = yield this.loadingCtrl.create({
+                message: 'Processando...',
+                spinner: 'bubbles',
+                cssClass: 'teste',
+                showBackdrop: true,
+                duration: 2000,
+            });
+            loading.present();
         });
     }
     ngOnInit() {

@@ -130,7 +130,18 @@ ion-content{
     display: flex;
   }
 
-  ion-title{
-    margin-left: 85px;
-  }
-  
+ion-title{
+  margin-left: -50px;
+}
+ion-icon{
+  color:rgb(235, 219, 0);
+}
+
+.fontenota{
+  margin-left:6px;
+}
+
+ion-toolbar{
+  background-color: #ad0002;
+  color: white;
+}

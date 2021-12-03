@@ -1,10 +1,11 @@
 <ion-header>
 	<link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet" />
-	<ion-toolbar>
+	<ion-toolbar color="body">
 	  <ion-buttons slot="start">
 		<ion-back-button defaultHref="home"></ion-back-button>
-		<ion-title>Lanches</ion-title>
 	  </ion-buttons>
+	  <ion-title style="text-align: center;">Lanches</ion-title>
+
 	</ion-toolbar>
   </ion-header>
   <ion-content>
@@ -15,6 +16,8 @@
 			<img src="{{post.photo}}"  class="img"/>
 		  <ion-card-title class="tituloreceitas">{{post.titulo}}</ion-card-title>
 		  <ion-card-subtitle class="fonteusuario">Por: {{post.usuario}}</ion-card-subtitle>
+		  <ion-row><ion-icon name="star"></ion-icon><ion-card-subtitle class="fontenota">{{post.nota}}</ion-card-subtitle></ion-row>
+
 		</ion-card-header>
 	  </ion-card>
 	</div>

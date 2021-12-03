@@ -200,7 +200,7 @@ async openGalery(){
       text += possible.charAt(Math.floor(Math.random() * possible.length));
       return text;
 }
-  submitPost(){
+ async submitPost(){
     console.log('running');
     this.auth.user$.subscribe(user =>{
       this.post.usuario = JSON.stringify(user.userName);
@@ -221,19 +221,29 @@ async openGalery(){
            if(this.post.tipo == ''){
              this.loading.presentToast('Por favor selecione a categoria');
           }else{
-         //inserindo no firebase
-         firebase.database().ref('posts').push(this.post).then(res=>{
+        // inserindo no firebase
+        firebase.database().ref('posts').push(this.post).then(res=>{
            console.log('pushed', res);
            this.navCtrl.navigateRoot('home');
-        });     
-
-       }
-       }
+        });
+     }
+      }
       }
     }
    }
   })
+  const loading = await this.loadingCtrl.create({
+    message: 'Processando...',
+    spinner: 'bubbles',
+    cssClass: 'teste',
+    showBackdrop: true,
+    duration: 1000,
+  })
+  loading.present();
+ 
 }
+
+
 
   async ngOnInit() {
     await this.storage.create();
