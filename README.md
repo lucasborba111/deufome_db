@@ -10,7 +10,7 @@
 <a href="https://github.com/DedeApenas"><img src="https://github.com/DedeApenas/forREADME/blob/main/Group%203%20(1).png"></a>
 <a href="https://github.com/lucasborba111"><img src="https://github.com/DedeApenas/forREADME/blob/main/Group%203%20(2).png"></a>
 
-#### Frameworks: 
+#### Tecnologias: 
 - [x] Angular <img src="https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_angular_icon_130754.png" height="25px" >
 - [x] Ionic  <img src="https://ionicframework.com/img/meta/logo.png" height="25px" >
 - [x] Nodejs. <img src="https://icons-for-free.com/iconfiles/png/512/install+javascript+js+node+npm+tools+icon-1320165731324625592.png" height="25px" >
